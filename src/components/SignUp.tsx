@@ -2,29 +2,20 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/signup.css';
 import HeaderSignup from './HeaderSignup';
-import ConnectWallet from './ConnectWallet';
 import packageLogo from '../assets/PackageLogo.png';
 
 export default function SignUp() {
   const [inviterAddress, setInviterAddress] = useState('');
-  const [walletModalOpen, setWalletModalOpen] = useState(false);
   const navigate = useNavigate();
 
   const handleConnectWallet = () => {
-    setWalletModalOpen(true);
-    // Navigate to home after a brief delay (to show modal briefly)
-    setTimeout(() => {
-      navigate('/home');
-    }, 500);
+    // Navigate to home page directly without showing modal
+    navigate('/home');
   };
 
   return (
     <>
-      <HeaderSignup onSigninClick={() => setWalletModalOpen(true)} />
-      <ConnectWallet 
-        isOpen={walletModalOpen} 
-        onClose={() => setWalletModalOpen(false)} 
-      />
+      <HeaderSignup onSigninClick={() => navigate('/home')} />
       <div className="signup-container">
       {/* Main Content */}
       <div className="signup-content">
