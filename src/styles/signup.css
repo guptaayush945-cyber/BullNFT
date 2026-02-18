@@ -1,0 +1,434 @@
+/* Signup Container */
+.signup-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgba(20, 20, 20, 0.95) 0%, rgba(30, 30, 40, 0.95) 100%);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-header {
+  max-width: 600px;
+  margin: 0 auto 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.logo-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffa500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.logo-img {
+  height: 80px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+.back-link {
+  color: #888;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.back-link:hover {
+  color: #ffa500;
+}
+
+/* Signup Content */
+.signup-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 100%; */
+    padding: 20px;
+    margin: 10px;
+    box-shadow: -2px -5px 17px 7px #564f2a38;
+    border-radius: 20px;
+}
+
+.signup-main {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Title Section */
+.signup-title-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.signup-title {
+    font-size: 2rem ! IMPORTANT;
+    margin: 0 0 1rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #FFFACD 0%, #FFD700 50%, #FDB913 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    LINE-HEIGHT: 32PX;
+}
+
+.signup-subtitle {
+  color: #888;
+  font-size: 1.1rem;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* Inviter Section */
+.inviter-section {
+  margin-bottom: 3rem;
+}
+
+.inviter-label {
+  display: block;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+.inviter-input {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  box-sizing: border-box;
+  margin-top: 0.5rem;
+}
+
+.inviter-input:focus {
+  outline: none;
+  border-color: rgba(255, 215, 0, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.15);
+}
+
+.inviter-input::placeholder {
+  color: #555;
+}
+
+.inviter-hint {
+  color: #666;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  letter-spacing: 0.3px;
+}
+
+/* Royal Pass Section */
+.royal-pass-section {
+  width: 100%;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Pass Card */
+.pass-card {
+  background: linear-gradient(135deg, rgba(64, 64, 64, 0.4) 0%, rgba(40, 40, 40, 0.4) 100%);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.pass-card:hover {
+  border-color: rgba(255, 215, 0, 0.3);
+  background: linear-gradient(135deg, rgba(64, 64, 64, 0.5) 0%, rgba(40, 40, 40, 0.5) 100%);
+}
+
+.pass-header {
+  display: flex;
+  align-items: center;
+ 
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.pass-icon {
+  font-size: 4.5rem;
+  line-height: 1;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.6)) drop-shadow(0 0 25px rgba(255, 215, 0, 0.3));
+  animation: glow 2s ease-in-out infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pass-icon-img {
+  height: 4.5rem;
+  width: auto;
+  max-width: 4.5rem;
+  object-fit: contain;
+}
+
+@keyframes glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.6)) drop-shadow(0 0 25px rgba(255, 215, 0, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.8)) drop-shadow(0 0 35px rgba(255, 215, 0, 0.5));
+  }
+}
+
+.pass-info {
+  flex: 1;
+}
+
+.pass-price {
+  font-size: 1.8rem;
+  color: #FFD700;
+  margin: 0;
+  font-weight: 700;
+}
+
+.pass-tier {
+  color: #888;
+  margin: 0.3rem 0 0;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* .pass-content {
+  margin-bottom: 1.5rem;
+} */
+
+.pass-name {
+  font-size: 1.3rem;
+  color: #fff;
+  margin: 0 0 0.8rem;
+  font-weight: 600;
+}
+
+.pass-description {
+  color: #aaa;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Connect Wallet Button */
+.connect-wallet-btn {
+  width: 100%;
+  padding: 1.2rem;
+  background: linear-gradient(135deg, #FFD700 0%, #FDB913 100%);
+  border: none;
+  border-radius: 12px;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+  margin-top: 2rem;
+}
+
+.connect-wallet-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(255, 215, 0, 0.4);
+}
+
+.connect-wallet-btn:active {
+  transform: translateY(0);
+}
+
+/* Footer Section */
+.signup-footer {
+  text-align: center;
+  margin-top: 1rem;
+  border-top: 1px solid rgba(255, 215, 0, 0.1);
+  padding-top: 1rem;
+}
+
+.signin-link {
+  color: #888;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.signin-link p {
+  margin: 0;
+}
+
+.signin-link a {
+  color: #FFD700;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.signin-link a:hover {
+  color: #FFED4E;
+}
+
+.signin-btn {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  padding: 1rem;
+  margin: 0 auto;
+  border: 2px solid #FFD700;
+  border-radius: 12px;
+  background: transparent;
+  color: #FFD700;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+.signin-btn:hover {
+  border-color: #FFED4E;
+  color: #FFED4E;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+.signin-btn:active {
+  transform: scale(0.98);
+}
+
+.recover-link {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.recover-link a {
+    color: #FFD700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+    text-decoration: underline;
+    margin-top: 6px;
+}
+
+.recover-link a:hover {
+  color: #FFED4E;
+}
+
+.mainnet-note {
+  color: #666;
+  font-size: 0.85rem;
+  letter-spacing: 0.3px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .signup-container {
+    padding: 1rem;
+  }
+
+  .signup-title {
+    font-size: 2rem;
+  }
+
+  .signup-main {
+    max-width: 100%;
+  }
+
+  .pass-card {
+    padding: 1.5rem;
+  }
+
+  .pass-header {
+    gap: 1rem;
+  }
+
+  .pass-icon {
+    font-size: 2rem;
+  }
+
+  .pass-price {
+    font-size: 1.5rem;
+  }
+
+  .signup-title-section {
+    margin-bottom: 1rem;
+  }
+
+  .inviter-section {
+    margin-bottom: 2rem;
+  }
+
+  .pass-card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .signup-title {
+    font-size: 1.6rem;
+  }
+
+  .signup-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .pass-card {
+    padding: 1.2rem;
+  }
+
+  .connect-wallet-btn {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+}

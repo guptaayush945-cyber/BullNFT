@@ -1,0 +1,212 @@
+.whats-next-section {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.whats-next-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.whats-next-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.5px;
+}
+
+.whats-next-header p {
+  font-size: 1rem;
+  color: #888;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.next-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.next-step-card {
+  padding: 1.8rem;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.next-step-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+  border-radius: 16px;
+}
+
+.next-step-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.next-step-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.next-step-card.next-step-purple {
+  background: linear-gradient(135deg, rgba(192, 114, 77, 0.12) 0%, rgba(160, 100, 70, 0.08) 100%);
+  border-color: rgba(192, 114, 77, 0.15);
+}
+
+.next-step-card.next-step-purple:hover {
+  border-color: rgba(192, 114, 77, 0.3);
+  background: linear-gradient(135deg, rgba(192, 114, 77, 0.18) 0%, rgba(160, 100, 70, 0.12) 100%);
+}
+
+.next-step-card.next-step-cyan {
+  background: linear-gradient(135deg, rgba(255, 179, 71, 0.12) 0%, rgba(255, 165, 50, 0.08) 100%);
+  border-color: rgba(255, 179, 71, 0.15);
+}
+
+.next-step-card.next-step-cyan:hover {
+  border-color: rgba(255, 179, 71, 0.3);
+  background: linear-gradient(135deg, rgba(255, 179, 71, 0.18) 0%, rgba(255, 165, 50, 0.12) 100%);
+}
+
+.next-step-card.next-step-indigo {
+  background: linear-gradient(135deg, rgba(205, 127, 50, 0.12) 0%, rgba(184, 102, 50, 0.08) 100%);
+  border-color: rgba(205, 127, 50, 0.15);
+}
+
+.next-step-card.next-step-indigo:hover {
+  border-color: rgba(205, 127, 50, 0.3);
+  background: linear-gradient(135deg, rgba(205, 127, 50, 0.18) 0%, rgba(184, 102, 50, 0.12) 100%);
+}
+
+.next-step-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.next-step-icon.icon-purple {
+  background: rgba(192, 114, 77, 0.2);
+  border: 1px solid rgba(192, 114, 77, 0.3);
+  box-shadow: 0 0 20px rgba(192, 114, 77, 0.4), inset 0 0 15px rgba(192, 114, 77, 0.2);
+}
+
+.next-step-icon.icon-cyan {
+  background: rgba(255, 179, 71, 0.2);
+  border: 1px solid rgba(255, 179, 71, 0.3);
+  box-shadow: 0 0 20px rgba(255, 179, 71, 0.4), inset 0 0 15px rgba(255, 179, 71, 0.2);
+}
+
+.next-step-icon.icon-indigo {
+  background: rgba(205, 127, 50, 0.2);
+  border: 1px solid rgba(205, 127, 50, 0.3);
+  box-shadow: 0 0 20px rgba(205, 127, 50, 0.4), inset 0 0 15px rgba(205, 127, 50, 0.2);
+}
+
+.next-step-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.next-step-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.next-step-content p {
+  font-size: 0.95rem;
+  color: #999;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .whats-next-section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .whats-next-header h2 {
+    font-size: 2rem;
+  }
+
+  .next-steps-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .next-step-card {
+    padding: 1.5rem;
+    gap: 1.2rem;
+  }
+
+  .next-step-icon {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+  }
+
+  .next-step-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .next-step-content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .whats-next-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .whats-next-header p {
+    font-size: 0.9rem;
+  }
+
+  .next-step-card {
+    padding: 1.2rem;
+    gap: 1rem;
+  }
+
+  .next-step-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+  }
+
+  .next-step-content h3 {
+    font-size: 1rem;
+  }
+
+  .next-step-content p {
+    font-size: 0.85rem;
+  }
+}

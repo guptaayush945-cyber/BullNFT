@@ -1,0 +1,61 @@
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(253, 185, 19, 0.3);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.75rem 0;
+  z-index: 99;
+}
+
+.nav-item {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  position: relative;
+}
+
+.nav-item svg {
+  stroke: #999;
+  transition: stroke 0.3s ease;
+}
+
+.nav-item:hover svg {
+  stroke: #fdb913;
+  filter: drop-shadow(0 0 8px rgba(253, 185, 19, 0.4));
+}
+
+.nav-item.active {
+  background: rgba(253, 185, 19, 0.1);
+}
+
+.nav-item.active svg {
+  stroke: #fdb913;
+  filter: drop-shadow(0 0 12px rgba(253, 185, 19, 0.6));
+}
+
+@media (max-width: 480px) {
+  .bottom-nav {
+    padding: 0.6rem 0;
+  }
+
+  .nav-item {
+    padding: 0.4rem 0.8rem;
+  }
+
+  .nav-item svg {
+    width: 20px;
+    height: 20px;
+  }
+}

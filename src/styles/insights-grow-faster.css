@@ -1,0 +1,229 @@
+.insights-section {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.insights-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.insights-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.5px;
+}
+
+.insights-header h2::after {
+  content: '';
+  display: block;
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ffed4e, transparent);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.insights-header p {
+  font-size: 1rem;
+  color: #888;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.insight-card {
+  padding: 1.8rem;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.insight-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+  border-radius: 16px;
+}
+
+.insight-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.insight-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.insight-card.insight-purple {
+  background: linear-gradient(135deg, rgba(253, 185, 19, 0.12) 0%, rgba(212, 165, 116, 0.08) 100%);
+  border-color: rgba(253, 185, 19, 0.15);
+}
+
+.insight-card.insight-purple:hover {
+  border-color: rgba(253, 185, 19, 0.3);
+  background: linear-gradient(135deg, rgba(253, 185, 19, 0.18) 0%, rgba(212, 165, 116, 0.12) 100%);
+}
+
+.insight-card.insight-cyan {
+  background: linear-gradient(135deg, rgba(255, 127, 80, 0.12) 0%, rgba(255, 140, 84, 0.08) 100%);
+  border-color: rgba(255, 127, 80, 0.15);
+}
+
+.insight-card.insight-cyan:hover {
+  border-color: rgba(255, 127, 80, 0.3);
+  background: linear-gradient(135deg, rgba(255, 127, 80, 0.18) 0%, rgba(255, 140, 84, 0.12) 100%);
+}
+
+.insight-card.insight-indigo {
+  background: linear-gradient(135deg, rgba(212, 165, 116, 0.12) 0%, rgba(180, 140, 90, 0.08) 100%);
+  border-color: rgba(212, 165, 116, 0.15);
+}
+
+.insight-card.insight-indigo:hover {
+  border-color: rgba(212, 165, 116, 0.3);
+  background: linear-gradient(135deg, rgba(212, 165, 116, 0.18) 0%, rgba(180, 140, 90, 0.12) 100%);
+}
+
+.insight-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  border-radius: 14px;
+  flex-shrink: 0;
+}
+
+.insight-icon.icon-purple {
+  background: rgba(253, 185, 19, 0.15);
+  border: 1px solid rgba(253, 185, 19, 0.25);
+  box-shadow: 0 0 25px rgba(253, 185, 19, 0.4), inset 0 0 20px rgba(253, 185, 19, 0.15);
+}
+
+.insight-icon.icon-cyan {
+  background: rgba(255, 127, 80, 0.15);
+  border: 1px solid rgba(255, 127, 80, 0.25);
+  box-shadow: 0 0 25px rgba(255, 127, 80, 0.4), inset 0 0 20px rgba(255, 127, 80, 0.15);
+}
+
+.insight-icon.icon-indigo {
+  background: rgba(212, 165, 116, 0.15);
+  border: 1px solid rgba(212, 165, 116, 0.25);
+  box-shadow: 0 0 25px rgba(212, 165, 116, 0.4), inset 0 0 20px rgba(212, 165, 116, 0.15);
+}
+
+.insight-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  flex: 1;
+}
+
+.insight-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.insight-content p {
+  font-size: 0.95rem;
+  color: #999;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .insights-section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .insights-header h2 {
+    font-size: 2rem;
+  }
+
+  .insights-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .insight-card {
+    padding: 1.5rem;
+    gap: 1.2rem;
+  }
+
+  .insight-icon {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+  }
+
+  .insight-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .insight-content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .insights-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .insights-header p {
+    font-size: 0.9rem;
+  }
+
+  .insights-grid {
+    gap: 1rem;
+  }
+
+  .insight-card {
+    padding: 1.2rem;
+    gap: 1rem;
+  }
+
+  .insight-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+  }
+
+  .insight-content h3 {
+    font-size: 1rem;
+  }
+
+  .insight-content p {
+    font-size: 0.85rem;
+  }
+}
