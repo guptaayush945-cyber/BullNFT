@@ -68,7 +68,7 @@
     align-items: center;
     justify-content: center;
     /* width: 100%; */
-    padding: 12px;
+    padding: 0 12px 12px 12px;
     margin: 0;
     box-shadow: -2px -5px 17px 7px #564f2a38;
     border-radius: 20px;
@@ -86,7 +86,7 @@
 }
 
 .signup-title {
-    font-size: 1.8rem ! IMPORTANT;
+    font-size: 1.6rem ! IMPORTANT;
     margin: 0 0 0.4rem;
     font-weight: 700;
     letter-spacing: -0.5px;
@@ -94,7 +94,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    LINE-HEIGHT: 28PX;
+    LINE-HEIGHT: 26PX;
 }
 
 .signup-subtitle {
@@ -375,7 +375,8 @@
   }
 
   .signup-title {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
+    line-height: 20px;
   }
 
   .signup-main {
@@ -417,7 +418,8 @@
   }
 
   .signup-title {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    line-height: 18px;
   }
 
   .signup-subtitle {
