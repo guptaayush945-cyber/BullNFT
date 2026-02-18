@@ -45,7 +45,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
-    background-color: #000;
+    background: linear-gradient(135deg, rgba(253, 185, 19, 0.12) 0%, rgba(218, 165, 32, 0.08) 100%);
+    border: 1px solid rgba(253, 185, 19, 0.1);
     border-radius: 10px;
 }
 .stat-icon-label {
