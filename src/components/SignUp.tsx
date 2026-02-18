@@ -2,10 +2,12 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/signup.css';
 import HeaderSignup from './HeaderSignup';
+import ConnectWallet from './ConnectWallet';
 import packageLogo from '../assets/PackageLogo.png';
 
 export default function SignUp() {
   const [inviterAddress, setInviterAddress] = useState('');
+  const [walletModalOpen, setWalletModalOpen] = useState(false);
   const navigate = useNavigate();
 
   const handleConnectWallet = () => {
@@ -13,9 +15,18 @@ export default function SignUp() {
     navigate('/home');
   };
 
+  const handleSignIn = () => {
+    // Open wallet modal for sign in
+    setWalletModalOpen(true);
+  };
+
   return (
     <>
-      <HeaderSignup onSigninClick={() => navigate('/home')} />
+      <HeaderSignup onSigninClick={handleSignIn} />
+      <ConnectWallet 
+        isOpen={walletModalOpen} 
+        onClose={() => setWalletModalOpen(false)} 
+      />
       <div className="signup-container">
       {/* Main Content */}
       <div className="signup-content">
@@ -74,7 +85,7 @@ export default function SignUp() {
             <div className="signup-footer">
               <div className="signin-link">
                 <p>Already have an account?</p>
-                <a href="#" onClick={(e) => { e.preventDefault(); handleConnectWallet(); }} className="signin-btn">Sign in</a>
+                <a href="#" onClick={(e) => { e.preventDefault(); handleSignIn(); }} className="signin-btn">Sign in</a>
               </div>
               <div className="recover-link">
                 Paid but signup didn't complete? <a href="/recover">Recover here</a>
