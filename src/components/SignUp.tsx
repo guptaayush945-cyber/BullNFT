@@ -77,7 +77,7 @@ export default function SignUp() {
             <div className="signup-footer">
               <div className="signin-link">
                 <p>Already have an account?</p>
-                <a href="/signin" className="signin-btn">Sign in</a>
+                <a href="#" onClick={(e) => { e.preventDefault(); handleConnectWallet(); }} className="signin-btn">Sign in</a>
               </div>
               <div className="recover-link">
                 Paid but signup didn't complete? <a href="/recover">Recover here</a>
