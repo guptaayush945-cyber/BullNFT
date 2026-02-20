@@ -23,7 +23,7 @@ export default function WelcomeSection() {
           </div>
           <div>
             <p className="plan-label">CURRENT PLAN</p>
-            <h3>Silver</h3>
+            <h3>NFT Start</h3>
           </div>
         </div>
         <button className="upgrade-btn" onClick={handleUpgrade}>👑 Upgrade</button>

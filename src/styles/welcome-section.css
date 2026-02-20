@@ -43,6 +43,7 @@
   border-radius: 15px;
   padding: 1.5rem;
   margin-top: 1rem;
+  margin-bottom: 0;
   backdrop-filter: blur(10px);
   flex-wrap: nowrap;
 }
@@ -83,7 +84,7 @@
   font-weight: 700;
 }
 
-.upgrade-btn {
+.welcome-section .upgrade-btn {
   background: linear-gradient(135deg, #2fc577 0%, #22ff88 100%);
   color: #000;
   border: none;
@@ -98,12 +99,12 @@
   margin-left: auto;
 }
 
-.upgrade-btn:hover {
+.welcome-section .upgrade-btn:hover {
   box-shadow: 0 0 35px rgba(255, 165, 0, 0.7);
   transform: translateY(-2px);
 }
 
-.upgrade-btn:active {
+.welcome-section .upgrade-btn:active {
   transform: scale(0.98);
 }
 
@@ -122,7 +123,7 @@
     gap: 1rem;
   }
 
-  .upgrade-btn {
+  .welcome-section .upgrade-btn {
     margin-left: 0;
     width: 100%;
   }
