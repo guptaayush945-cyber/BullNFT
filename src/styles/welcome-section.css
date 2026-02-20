@@ -50,16 +50,17 @@
 
 .plan-card {
   display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  flex: 0 1 auto;
+    align-items: center;
+    gap: 1rem;
+    flex: 0 1 auto;
+    padding: 10px;
 }
 
-.plan-icon {
-  width: 70px;
-  height: 70px;
+.welcome-section .plan-icon {
+  width: 60px;
+  height: 60px;
   background: rgba(100, 150, 200, 0.2);
-  border: 3px solid #22ff88;
+  
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -78,7 +79,7 @@
 }
 
 .welcome-section .plan-card h3 {
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: #fff;
   margin: 0;
   font-weight: 700;
@@ -89,12 +90,12 @@
   color: #000;
   border: none;
   border-radius: 30px;
-  padding: 1rem 2.5rem;
+  padding: 0.5rem 0.5rem;
   font-weight: 700;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 0 25px #22ff8875;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   white-space: nowrap;
   margin-left: auto;
 }

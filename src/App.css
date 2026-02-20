@@ -250,14 +250,6 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Cards Grid */
-.cards-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
 .earnings-cards-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -633,11 +625,6 @@ body {
   .main-content-home {
     padding: 1rem;
     padding-bottom: 80px;
-  }
-
-  .cards-grid {
-    gap: 0.6rem;
-    margin-bottom: 1rem;
   }
 
   .earnings-cards-grid {
