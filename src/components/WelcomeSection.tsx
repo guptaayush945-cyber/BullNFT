@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import '../styles/welcome-section.css';
-import packageLogo from '../assets/images/packageicons/packagelogo.png';
+import packageLogo from '../assets/images/packageicons/PackageLogo.png';
 
 export default function WelcomeSection() {
   const navigate = useNavigate();

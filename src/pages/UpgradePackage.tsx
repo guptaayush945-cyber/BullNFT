@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import '../styles/upgrade-package.css';
 import Header from '../components/Header';
 import BottomNavigation from '../components/BottomNavigation';
-import packageLogo from '../assets/images/packageicons/packagelogo.png';
+import packageLogo from '../assets/images/packageicons/PackageLogo.png';
 
 interface Plan {
   id: number;

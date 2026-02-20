@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import '../styles/signup.css';
 import HeaderSignup from './HeaderSignup';
 import ConnectWallet from './ConnectWallet';
-import packageLogo from '../assets/images/packageicons/packagelogo.png';
+import packageLogo from '../assets/images/packageicons/PackageLogo.png';
 
 export default function SignUp() {
   const [inviterAddress, setInviterAddress] = useState('');

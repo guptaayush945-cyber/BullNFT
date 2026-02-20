@@ -33,7 +33,7 @@
 }
 
 /* Plan Section */
-.plan-section {
+.welcome-section .plan-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,7 +48,7 @@
   flex-wrap: nowrap;
 }
 
-.plan-card {
+.welcome-section .plan-card {
   display: flex;
     align-items: center;
     gap: 1rem;
