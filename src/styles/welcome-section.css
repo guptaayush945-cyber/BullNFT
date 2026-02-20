@@ -1,0 +1,135 @@
+/* Welcome Section */
+.welcome-section {
+  background: linear-gradient(135deg, rgb(60 43 26) 0%, rgb(0 0 0 / 60%) 100%);
+  border: 1px solid rgba(255, 165, 0, 0.2);
+  border-radius: 20px;
+  padding: 1rem 1rem;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+  scroll-margin-top: 100px;
+  margin-top: 0;
+}
+
+.welcome-section h1 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.wallet-address {
+  font-size: 1.5rem;
+  background: linear-gradient(90deg, #ffbe46 0%, #e2f472 50%, rgb(197 187 120 / 80%) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #999;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* Plan Section */
+.plan-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.3) 100%);
+  border: 1px solid rgba(255, 165, 0, 0.15);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  backdrop-filter: blur(10px);
+  flex-wrap: nowrap;
+}
+
+.plan-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.plan-icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(100, 150, 200, 0.2);
+  border: 3px solid #22ff88;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  box-shadow: 0 0 25px rgba(34, 255, 136, 0.6), inset 0 0 20px rgba(34, 255, 136, 0.3);
+  flex-shrink: 0;
+}
+
+.plan-label {
+  color: #7a8a9a;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.25rem;
+}
+
+.plan-card h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 0;
+  font-weight: 700;
+}
+
+.upgrade-btn {
+  background: linear-gradient(135deg, #2fc577 0%, #22ff88 100%);
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  padding: 1rem 2.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 25px #22ff8875;
+  font-size: 1.1rem;
+  white-space: nowrap;
+  margin-left: auto;
+}
+
+.upgrade-btn:hover {
+  box-shadow: 0 0 35px rgba(255, 165, 0, 0.7);
+  transform: translateY(-2px);
+}
+
+.upgrade-btn:active {
+  transform: scale(0.98);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .welcome-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .wallet-address {
+    font-size: 1.2rem;
+  }
+
+  .plan-section {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .upgrade-btn {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .plan-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+}

@@ -1,4 +1,6 @@
 import { useNavigate } from 'react-router-dom';
+import '../styles/welcome-section.css';
+import packageLogo from '../assets/images/packageicons/packagelogo.png';
 
 export default function WelcomeSection() {
   const navigate = useNavigate();
@@ -16,7 +18,9 @@ export default function WelcomeSection() {
       {/* Current Plan Section */}
       <div className="plan-section">
         <div className="plan-card">
-          <div className="plan-icon">🛡️</div>
+          <div className="plan-icon">
+            <img src={packageLogo} alt="Package Logo" width="50" height="50" />
+          </div>
           <div>
             <p className="plan-label">CURRENT PLAN</p>
             <h3>Silver</h3>

@@ -1,5 +1,6 @@
 import Card from './Card';
 import { EarningsIcon, ChartIcon, CalendarIcon, CrownIcon } from './SvgIcons';
+import '../styles/cards-grid.css';
 
 export default function CardsGrid() {
   return (
