@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/upgrade-package.css';
 import Header from '../components/Header';
 import BottomNavigation from '../components/BottomNavigation';
@@ -13,6 +14,7 @@ interface Plan {
 }
 
 export default function UpgradePackage() {
+  const navigate = useNavigate();
   const [selectedPlan] = useState<Plan>({
     id: 1,
     name: 'Silver',
@@ -146,7 +148,7 @@ export default function UpgradePackage() {
                         {plan.dailyProfit}
                       </p>
                     </div>
-                    <button className="upgrade-btn" style={{ borderColor: plan.color }}>
+                    <button className="upgrade-btn" style={{ borderColor: plan.color }} onClick={() => navigate('/home')}>
                       Upgrade Now
                     </button>
                   </div>

@@ -1,4 +1,12 @@
+import { useNavigate } from 'react-router-dom';
+
 export default function WelcomeSection() {
+  const navigate = useNavigate();
+
+  const handleUpgrade = () => {
+    navigate('/upgrade');
+  };
+
   return (
     <div className="welcome-section">
       <h1>Welcome back,</h1>
@@ -14,7 +22,7 @@ export default function WelcomeSection() {
             <h3>Silver</h3>
           </div>
         </div>
-        <button className="upgrade-btn">👑 Upgrade</button>
+        <button className="upgrade-btn" onClick={handleUpgrade}>👑 Upgrade</button>
       </div>
     </div>
   );
