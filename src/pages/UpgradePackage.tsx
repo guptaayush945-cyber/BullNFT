@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import '../styles/upgrade-package.css';
 import Header from '../components/Header';
 import BottomNavigation from '../components/BottomNavigation';
+import packageLogo from '../assets/images/packageicons/packagelogo.png';
 
 interface Plan {
   id: number;
@@ -17,7 +18,7 @@ export default function UpgradePackage() {
   const navigate = useNavigate();
   const [selectedPlan] = useState<Plan>({
     id: 1,
-    name: 'Silver',
+    name: 'NFT Start',
     earnings: 'Up to 25x',
     dailyProfit: '$125',
     color: '#00ff88',
@@ -27,7 +28,7 @@ export default function UpgradePackage() {
   const upgradePlans: Plan[] = [
     {
       id: 2,
-      name: 'Gold',
+      name: 'NFT Pro',
       earnings: 'Up to 50x',
       dailyProfit: '$250',
       color: '#FFD700',
@@ -35,18 +36,58 @@ export default function UpgradePackage() {
     },
     {
       id: 3,
-      name: 'Platinum',
+      name: 'NFT Plus',
       earnings: 'Up to 100x',
       dailyProfit: '$500',
-      color: '#E5E4E2',
+      color: '#E8B4B8',
       progress: 0
     },
     {
       id: 4,
-      name: 'Diamond',
+      name: 'NFT Grow',
       earnings: 'Up to 200x',
       dailyProfit: '$1000',
-      color: '#00BFFF',
+      color: '#DAA520',
+      progress: 0
+    },
+    {
+      id: 5,
+      name: 'NFT Max',
+      earnings: 'Up to 100x',
+      dailyProfit: '$500',
+      color: '#CD7F32',
+      progress: 0
+    },
+    {
+      id: 6,
+      name: 'NFT Ultra',
+      earnings: 'Up to 100x',
+      dailyProfit: '$500',
+      color: '#B87333',
+      progress: 0
+    },
+    {
+      id: 7,
+      name: 'NFT Elite',
+      earnings: 'Up to 100x',
+      dailyProfit: '$500',
+      color: '#F7E98E',
+      progress: 0
+    },
+    {
+      id: 8,
+      name: 'NFT Legend',
+      earnings: 'Up to 100x',
+      dailyProfit: '$500',
+      color: '#FFBF00',
+      progress: 0
+    },
+    {
+      id: 9,
+      name: 'NFT Supreme',
+      earnings: 'Up to 250x',
+      dailyProfit: '$1250',
+      color: '#FFFACD',
       progress: 0
     }
   ];
@@ -75,10 +116,7 @@ export default function UpgradePackage() {
               <div className="current-plan-card" style={{ borderColor: selectedPlan.color }}>
                 <div className="plan-icon-wrapper">
                   <div className="plan-icon" style={{ borderColor: selectedPlan.color }}>
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-                      <path d="M12 2L3 7V12C3 18.627 7.477 23.966 12 24C16.523 23.966 21 18.627 21 12V7L12 2Z" 
-                        stroke={selectedPlan.color} strokeWidth="2" fill="none"/>
-                    </svg>
+                    <img src={packageLogo} alt="Package Logo" width="40" height="40" />
                   </div>
                 </div>
 
@@ -87,7 +125,12 @@ export default function UpgradePackage() {
 
                 <div className="plan-stats">
                   <div className="stat">
-                    <div className="stat-icon">📈</div>
+                    <div className="stat-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                        <polyline points="17 6 23 6 23 12"></polyline>
+                      </svg>
+                    </div>
                     <div className="stat-content">
                       <p className="stat-value" style={{ color: selectedPlan.color }}>
                         {selectedPlan.earnings}
@@ -96,7 +139,11 @@ export default function UpgradePackage() {
                     </div>
                   </div>
                   <div className="stat">
-                    <div className="stat-icon">⚡</div>
+                    <div className="stat-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                      </svg>
+                    </div>
                     <div className="stat-content">
                       <p className="stat-value" style={{ color: '#FFD700' }}>
                         {selectedPlan.dailyProfit}
@@ -138,15 +185,35 @@ export default function UpgradePackage() {
                       </div>
                     </div>
                     <h4 className="plan-name small">{plan.name}</h4>
-                    <div className="plan-benefits">
-                      <p className="benefit">
-                        <span className="benefit-icon">📈</span>
-                        {plan.earnings}
-                      </p>
-                      <p className="benefit">
-                        <span className="benefit-icon">⚡</span>
-                        {plan.dailyProfit}
-                      </p>
+                    <p className="plan-description">Your active trading tier</p>
+                    <div className="plan-stats">
+                      <div className="stat">
+                        <div className="stat-icon">
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                            <polyline points="17 6 23 6 23 12"></polyline>
+                          </svg>
+                        </div>
+                        <div className="stat-content">
+                          <p className="stat-value" style={{ color: plan.color }}>
+                            {plan.earnings}
+                          </p>
+                          <p className="stat-label">MAX EARNINGS</p>
+                        </div>
+                      </div>
+                      <div className="stat">
+                        <div className="stat-icon">
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                          </svg>
+                        </div>
+                        <div className="stat-content">
+                          <p className="stat-value" style={{ color: plan.color }}>
+                            {plan.dailyProfit}
+                          </p>
+                          <p className="stat-label">DAILY PROFIT RATE</p>
+                        </div>
+                      </div>
                     </div>
                     <button className="upgrade-btn" style={{ borderColor: plan.color }} onClick={() => navigate('/home')}>
                       Upgrade Now
