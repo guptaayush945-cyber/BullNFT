@@ -6,6 +6,12 @@
   margin-bottom: 2rem;
 }
 
+/* Ensure gold and blue cards have equal width */
+.cards-grid-primary .card-gold,
+.cards-grid-primary .card-blue {
+  width: 100%;
+}
+
 /* Secondary Cards Grid - Other Cards */
 .cards-grid-secondary {
   display: grid;
