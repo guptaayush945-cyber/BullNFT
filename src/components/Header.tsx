@@ -15,7 +15,8 @@ export default function Header() {
     setMenuOpen(false);
   };
 
-  const handleMenuClick = (path: string) => {
+  const handleMenuClick = (path: string, e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
     navigate(path);
     closeMenu();
   };
@@ -36,11 +37,11 @@ export default function Header() {
       {menuOpen && (
         <div className="mobile-menu">
           <nav className="menu-items">
-            <a href="/" onClick={() => { handleMenuClick('/home'); }}>Home</a>
-            <a href="/" onClick={() => { handleMenuClick('/marketplace'); }}>Marketplace</a>
-            <a href="/" onClick={() => { handleMenuClick('/upgrade'); }}>Upgrade Plan</a>
-            <a href="/" onClick={() => { handleMenuClick('/about'); }}>Bull Pass</a>
-            <a href="/" onClick={() => { handleMenuClick('/contact'); }}>Team Tree</a>
+            <a href="/" onClick={(e) => handleMenuClick('/home', e)}>Home</a>
+            <a href="/" onClick={(e) => handleMenuClick('/marketplace', e)}>Marketplace</a>
+            <a href="/" onClick={(e) => handleMenuClick('/upgrade', e)}>Upgrade Plan</a>
+            <a href="/" onClick={(e) => handleMenuClick('/about', e)}>Bull Pass</a>
+            <a href="/" onClick={(e) => handleMenuClick('/contact', e)}>Team Tree</a>
           </nav>
         </div>
       )}
