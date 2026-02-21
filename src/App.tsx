@@ -5,6 +5,7 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import SignUp from './components/SignUp'
 import UpgradePackage from './pages/UpgradePackage'
+import Marketplace from './pages/Marketplace'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/upgrade" element={<UpgradePackage />} />
+          <Route path="/marketplace" element={<Marketplace />} />
         </Routes>
       </main>
     </div>

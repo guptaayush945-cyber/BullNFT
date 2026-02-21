@@ -1,0 +1,255 @@
+/* Package Card Container */
+.package-card {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(7, 2, 2, 0.9) 100%);
+  border: 2px solid;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.package-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, currentColor, transparent);
+  opacity: 0.3;
+}
+
+.package-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(253, 185, 19, 0.2);
+}
+
+/* Card Header */
+.package-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.package-icon-wrapper {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border: 2px solid;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.package-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.icon-symbol {
+  display: block;
+  font-size: 2.5rem;
+}
+
+.package-info {
+  flex: 1;
+}
+
+.package-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 0.3rem 0;
+  letter-spacing: 0.5px;
+}
+
+.package-level {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Price Section */
+.package-price-section {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(253, 185, 19, 0.1);
+}
+
+.price-currency {
+  font-size: 0.9rem;
+  color: #FFD700;
+  font-weight: 600;
+}
+
+.price-amount {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FFD700;
+  letter-spacing: -1px;
+}
+
+.price-tier {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-left: 0.5rem;
+  font-weight: 500;
+}
+
+/* Features List */
+.package-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.4;
+}
+
+.feature-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+  flex-shrink: 0;
+  width: 20px;
+  text-align: center;
+}
+
+.feature-text {
+  font-weight: 500;
+}
+
+/* Action Button */
+.package-action-btn {
+  width: 100%;
+  padding: 0.9rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 2px solid;
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  color: #FFD700;
+  text-transform: capitalize;
+}
+
+.package-action-btn:hover:not(.active) {
+  background: rgba(253, 185, 19, 0.1);
+  transform: scale(1.02);
+}
+
+.package-action-btn.active {
+  background: linear-gradient(135deg, rgba(0, 255, 136, 0.2) 0%, rgba(0, 255, 136, 0.1) 100%);
+  border-color: #00ff88;
+  color: #00ff88;
+}
+
+.package-action-btn:active:not(.active) {
+  transform: scale(0.98);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .package-card {
+    padding: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .package-card-header {
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .package-icon-wrapper {
+    width: 70px;
+    height: 70px;
+  }
+
+  .package-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon-symbol {
+    font-size: 2rem;
+  }
+
+  .package-name {
+    font-size: 1.2rem;
+  }
+
+  .price-amount {
+    font-size: 1.5rem;
+  }
+
+  .feature-item {
+    font-size: 0.85rem;
+  }
+
+  .package-action-btn {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .package-card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .package-icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+
+  .package-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .package-name {
+    font-size: 1rem;
+  }
+
+  .package-level {
+    font-size: 0.8rem;
+  }
+
+  .price-amount {
+    font-size: 1.3rem;
+  }
+
+  .feature-item {
+    font-size: 0.8rem;
+    gap: 0.6rem;
+  }
+
+  .package-action-btn {
+    padding: 0.7rem 1rem;
+    font-size: 0.85rem;
+  }
+}

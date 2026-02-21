@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import logoImg from '../assets/logo.png';
 import '../styles/header.css';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -11,6 +13,11 @@ export default function Header() {
 
   const closeMenu = () => {
     setMenuOpen(false);
+  };
+
+  const handleMenuClick = (path: string) => {
+    navigate(path);
+    closeMenu();
   };
 
   return (
@@ -29,12 +36,11 @@ export default function Header() {
       {menuOpen && (
         <div className="mobile-menu">
           <nav className="menu-items">
-            <a href="/" onClick={closeMenu}>Home</a>
-            <a href="#" onClick={closeMenu}>Dashboard</a>
-            <a href="#" onClick={closeMenu}>Marketplace</a>
-            <a href="#" onClick={closeMenu}>Upgrade Plan</a>
-            <a href="#" onClick={closeMenu}>Bull Pass</a>
-            <a href="#" onClick={closeMenu}>Team Tree</a>
+            <a href="/" onClick={() => { handleMenuClick('/home'); }}>Home</a>
+            <a href="/" onClick={() => { handleMenuClick('/marketplace'); }}>Marketplace</a>
+            <a href="/" onClick={() => { handleMenuClick('/upgrade'); }}>Upgrade Plan</a>
+            <a href="/" onClick={() => { handleMenuClick('/about'); }}>Bull Pass</a>
+            <a href="/" onClick={() => { handleMenuClick('/contact'); }}>Team Tree</a>
           </nav>
         </div>
       )}

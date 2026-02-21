@@ -245,6 +245,7 @@
 /* Upgrade Options Section */
 .upgrade-options-section {
   margin-bottom: 2rem;
+  display:none
 }
 
 .plans-grid {
@@ -420,5 +421,27 @@
 
   .progress-text {
     font-size: 1.3rem;
+  }
+}
+/* Package Cards Section */
+.packages-cards-section {
+  margin-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.packages-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .packages-cards-section {
+    margin-top: 3rem;
+  }
+
+  .packages-container {
+    gap: 1.2rem;
   }
 }

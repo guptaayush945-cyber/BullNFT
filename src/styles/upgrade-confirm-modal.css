@@ -1,0 +1,256 @@
+/* Modal Overlay - Background */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+/* Modal Content Container */
+.modal-content {
+  position: relative;
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border: 1px solid rgba(253, 185, 19, 0.2);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  max-width: 90%;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(253, 185, 19, 0.1);
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Close button */
+.modal-close-btn {
+  position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    padding: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.modal-close-btn:hover {
+  background: rgba(253, 185, 19, 0.1);
+  color: #ffffff;
+}
+
+/* Modal Header */
+.modal-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  gap: 1rem;
+}
+
+.crown-icon {
+  font-size: 1.2rem;
+  animation: bounce 0.6s ease-out;
+  flex-shrink: 0;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.modal-header h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #FFD700;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* Subtitle */
+.modal-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 2rem 0;
+  line-height: 1.5;
+}
+
+.modal-subtitle .highlight {
+  color: #FFD700;
+  font-weight: 600;
+}
+
+/* Details Section */
+.modal-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1.5rem;
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(253, 185, 19, 0.2);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.detail-item:hover {
+  background: rgba(30, 41, 59, 0.8);
+  border-color: rgba(253, 185, 19, 0.4);
+}
+
+.detail-label {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.detail-value {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Price styling */
+.detail-value.price {
+  color: #FF1493;
+  font-size: 1.3rem;
+}
+
+/* Daily limit styling */
+.detail-value.daily-limit {
+  color: #00ff88;
+  font-size: 1.3rem;
+}
+
+/* Action Buttons */
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.btn-cancel,
+.btn-confirm {
+  flex: 1;
+  min-width: 120px;
+  padding: 0.8rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.btn-cancel {
+  background: rgba(30, 41, 59, 0.8);
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-cancel:hover {
+  background: rgba(30, 41, 59, 0.95);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.btn-cancel:active {
+  transform: scale(0.98);
+}
+
+.btn-confirm {
+  background: linear-gradient(135deg, #FFD700 0%, #DAA520 100%);
+  color: #000000;
+  box-shadow: 0 4px 20px rgba(253, 185, 19, 0.4);
+}
+
+.btn-confirm:hover {
+  background: linear-gradient(135deg, #FDB913 0%, #FFD700 100%);
+  box-shadow: 0 6px 30px rgba(253, 185, 19, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-confirm:active {
+  transform: translateY(0);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .modal-content {
+    padding: 1.5rem 1.5rem;
+    border-radius: 16px;
+  }
+
+  .modal-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .modal-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .detail-item {
+    padding: 1rem 1.2rem;
+  }
+
+  .detail-label {
+    font-size: 0.9rem;
+  }
+
+  .detail-value {
+    font-size: 1.1rem;
+  }
+
+  .modal-actions {
+    display: flex;
+    gap: 0.8rem;
+  }
+
+  .btn-cancel,
+  .btn-confirm {
+    min-width: 100px;
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}

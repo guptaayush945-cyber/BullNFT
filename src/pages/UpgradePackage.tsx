@@ -3,24 +3,48 @@ import { useNavigate } from 'react-router-dom';
 import '../styles/upgrade-package.css';
 import Header from '../components/Header';
 import BottomNavigation from '../components/BottomNavigation';
+import UpgradeConfirmModal from '../components/UpgradeConfirmModal';
+import PackageCard from '../components/PackageCard';
 import packageLogo from '../assets/images/packageicons/PackageLogo.png';
+
+interface Feature {
+  icon: string;
+  text: string;
+}
 
 interface Plan {
   id: number;
   name: string;
+  level: string;
   earnings: string;
   dailyProfit: string;
+  price: string;
+  dailyLimit: string;
+  tier: string;
+  features: Feature[];
   color: string;
   progress: number;
 }
 
 export default function UpgradePackage() {
   const navigate = useNavigate();
+  const [showModal, setShowModal] = useState(false);
+  const [selectedUpgradePlan, setSelectedUpgradePlan] = useState<Plan | null>(null);
+
   const [selectedPlan] = useState<Plan>({
     id: 1,
     name: 'NFT Start',
+    level: 'Level 1',
     earnings: 'Up to 25x',
     dailyProfit: '$125',
+    price: '25',
+    dailyLimit: '$125',
+    tier: 'Entry Tier',
+    features: [
+      { icon: '●', text: 'Daily trading limit: $125 USDT' },
+      { icon: '●', text: 'Perfect for beginners' },
+      { icon: '●', text: 'Basic marketplace access' }
+    ],
     color: '#00ff88',
     progress: 2
   });
@@ -29,68 +53,158 @@ export default function UpgradePackage() {
     {
       id: 2,
       name: 'NFT Pro',
+      level: 'Level 2',
       earnings: 'Up to 50x',
       dailyProfit: '$250',
+      price: '50',
+      dailyLimit: '$250',
+      tier: 'Standard Tier',
+      features: [
+        { icon: '●', text: 'Daily trading limit: $250 USDT' },
+        { icon: '●', text: 'Good for active traders' },
+        { icon: '●', text: 'Full marketplace access' }
+      ],
       color: '#FFD700',
       progress: 0
     },
     {
       id: 3,
       name: 'NFT Plus',
+      level: 'Level 3',
       earnings: 'Up to 100x',
       dailyProfit: '$500',
+      price: '100',
+      dailyLimit: '$500',
+      tier: 'Premium Tier',
+      features: [
+        { icon: '●', text: 'Daily trading limit: $500 USDT' },
+        { icon: '●', text: 'Premium marketplace features' },
+        { icon: '●', text: 'Priority support' }
+      ],
       color: '#E8B4B8',
       progress: 0
     },
     {
       id: 4,
       name: 'NFT Grow',
+      level: 'Level 4',
       earnings: 'Up to 200x',
       dailyProfit: '$1000',
+      price: '200',
+      dailyLimit: '$1000',
+      tier: 'Elite Tier',
+      features: [
+        { icon: '●', text: 'Daily trading limit: $1000 USDT' },
+        { icon: '●', text: 'Advanced analytics included' },
+        { icon: '●', text: 'Dedicated account manager' }
+      ],
       color: '#DAA520',
       progress: 0
     },
     {
       id: 5,
       name: 'NFT Max',
+      level: 'Level 5',
       earnings: 'Up to 100x',
       dailyProfit: '$500',
+      price: '150',
+      dailyLimit: '$500',
+      tier: 'Advanced Tier',
+      features: [
+        { icon: '●', text: 'Daily trading limit: $500 USDT' },
+        { icon: '●', text: 'Advanced trading tools' },
+        { icon: '●', text: 'Priority API access' }
+      ],
       color: '#CD7F32',
       progress: 0
     },
     {
       id: 6,
       name: 'NFT Ultra',
+      level: 'Level 6',
       earnings: 'Up to 100x',
       dailyProfit: '$500',
+      price: '175',
+      dailyLimit: '$500',
+      tier: 'VIP Tier',
+      features: [
+        { icon: '●', text: 'Daily trading limit: $500 USDT' },
+        { icon: '●', text: 'VIP marketplace access' },
+        { icon: '●', text: '24/7 premium support' }
+      ],
       color: '#B87333',
       progress: 0
     },
     {
       id: 7,
       name: 'NFT Elite',
+      level: 'Level 7',
       earnings: 'Up to 100x',
       dailyProfit: '$500',
+      price: '250',
+      dailyLimit: '$500',
+      tier: 'Exclusive Tier',
+      features: [
+        { icon: '●', text: 'Daily trading limit: $500 USDT' },
+        { icon: '●', text: 'Exclusive NFT drops' },
+        { icon: '●', text: 'Private trading rooms' }
+      ],
       color: '#F7E98E',
       progress: 0
     },
     {
       id: 8,
       name: 'NFT Legend',
+      level: 'Level 8',
       earnings: 'Up to 100x',
       dailyProfit: '$500',
+      price: '300',
+      dailyLimit: '$500',
+      tier: 'Legendary Tier',
+      features: [
+        { icon: '●', text: 'Daily trading limit: $500 USDT' },
+        { icon: '●', text: 'Legendary perks unlocked' },
+        { icon: '●', text: 'Custom trading strategies' }
+      ],
       color: '#FFBF00',
       progress: 0
     },
     {
       id: 9,
       name: 'NFT Supreme',
+      level: 'Level 9',
       earnings: 'Up to 250x',
       dailyProfit: '$1250',
+      price: '500',
+      dailyLimit: '$1250',
+      tier: 'Supreme Tier',
+      features: [
+        { icon: '●', text: 'Daily trading limit: $1250 USDT' },
+        { icon: '●', text: 'Supreme luxury benefits' },
+        { icon: '●', text: 'Lifetime premium status' }
+      ],
       color: '#FFFACD',
       progress: 0
     }
   ];
+
+  const handleUpgradeClick = (plan: Plan) => {
+    setSelectedUpgradePlan(plan);
+    setShowModal(true);
+  };
+
+  const handleConfirmUpgrade = () => {
+    // Add your upgrade logic here
+    console.log('Upgrading to:', selectedUpgradePlan?.name);
+    setShowModal(false);
+    // You can add navigation or API calls here
+    navigate('/home');
+  };
+
+  const handleCancelUpgrade = () => {
+    setShowModal(false);
+    setSelectedUpgradePlan(null);
+  };
 
   return (
     <>
@@ -215,16 +329,47 @@ export default function UpgradePackage() {
                         </div>
                       </div>
                     </div>
-                    <button className="upgrade-btn" style={{ borderColor: plan.color }} onClick={() => navigate('/home')}>
+                    <button className="upgrade-btn" style={{ borderColor: plan.color }} onClick={() => handleUpgradeClick(plan)}>
                       Upgrade Now
                     </button>
                   </div>
                 ))}
               </div>
             </div>
+
+            {/* Package Cards Section */}
+            <div className="packages-cards-section">
+              <h2 className="section-title">ALL PACKAGES</h2>
+              <div className="packages-container">
+                {upgradePlans.map((plan) => (
+                  <PackageCard
+                    key={plan.id}
+                    id={plan.id}
+                    name={plan.name}
+                    level={plan.level}
+                    price={plan.price}
+                    tier={plan.tier}
+                    features={plan.features}
+                    color={plan.color}
+                    buttonText="Upgrade Now"
+                    onButtonClick={() => handleUpgradeClick(plan)}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </main>
       </div>
+      {selectedUpgradePlan && (
+        <UpgradeConfirmModal
+          isOpen={showModal}
+          planName={selectedUpgradePlan.name}
+          price={selectedUpgradePlan.price}
+          dailyLimit={selectedUpgradePlan.dailyLimit}
+          onConfirm={handleConfirmUpgrade}
+          onCancel={handleCancelUpgrade}
+        />
+      )}
       <BottomNavigation />
     </>
   );
