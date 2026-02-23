@@ -1,5 +1,6 @@
 import Header from '../components/Header';
 import BottomNavigation from '../components/BottomNavigation';
+import { CrownIcon, SparkleIcon, CardIcon, DiamondIcon, ShieldIcon, MoneyIcon } from '../components/SvgIcons';
 import '../styles/dashboard.css';
 
 export default function Dashboard() {
@@ -22,7 +23,7 @@ export default function Dashboard() {
           <div className="dashboard-welcome">
             <h1 className="dashboard-title">{dashboardData.title}</h1>
             <div className="member-badge">
-              <span className="badge-icon">👑</span>
+              <CrownIcon color="#FFD700" />
               <span className="badge-text">{dashboardData.memberStatus}</span>
             </div>
           </div>
@@ -33,7 +34,9 @@ export default function Dashboard() {
             <div className="dashboard-card sol-card">
               <div className="card-header">
                 <h3 className="card-title">SOL BALANCE</h3>
-                <div className="card-icon">✨</div>
+                <div className="card-icon">
+                  <SparkleIcon color="#FFD700" />
+                </div>
               </div>
               <div className="card-value">
                 <span className="amount">{dashboardData.solBalance}</span>
@@ -45,7 +48,9 @@ export default function Dashboard() {
             <div className="dashboard-card usdt-card">
               <div className="card-header">
                 <h3 className="card-title">USDT BALANCE</h3>
-                <div className="card-icon">💳</div>
+                <div className="card-icon">
+                  <CardIcon color="#FFD700" />
+                </div>
               </div>
               <div className="card-value">
                 <span className="amount">{dashboardData.usdtBalance}</span>
@@ -57,7 +62,9 @@ export default function Dashboard() {
             <div className="dashboard-card diamonds-card">
               <div className="card-header">
                 <h3 className="card-title">DIAMONDS</h3>
-                <div className="card-icon">💎</div>
+                <div className="card-icon">
+                  <DiamondIcon color="#FFD700" />
+                </div>
               </div>
               <div className="card-value">
                 <span className="amount">{dashboardData.diamonds}</span>
@@ -69,11 +76,13 @@ export default function Dashboard() {
             <div className="dashboard-card level-card">
               <div className="card-header">
                 <h3 className="card-title">CURRENT LEVEL</h3>
-                <div className="card-icon">👑</div>
+                <div className="card-icon">
+                  <CrownIcon color="#FFD700" />
+                </div>
               </div>
               <div className="level-content">
                 <div className="level-badge">
-                  <div className="shield-icon">🛡️</div>
+                  <ShieldIcon color="#FFD700" />
                 </div>
                 <span className="level-name">{dashboardData.currentLevel}</span>
               </div>
@@ -83,7 +92,9 @@ export default function Dashboard() {
             <div className="dashboard-card income-card">
               <div className="card-header">
                 <h3 className="card-title">TOTAL INCOME</h3>
-                <div className="card-icon">💵</div>
+                <div className="card-icon">
+                  <MoneyIcon color="#FFD700" />
+                </div>
               </div>
               <div className="card-value">
                 <span className="amount">{dashboardData.totalIncome}</span>

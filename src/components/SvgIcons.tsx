@@ -67,3 +67,45 @@ export const TrendingIcon = ({ color }: SvgIconProps) => (
     <path d="M32 10H36V14" stroke={color} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
+
+export const SparkleIcon = ({ color }: SvgIconProps) => (
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20 4L23 12H31L25 16L27 24L20 20L13 24L15 16L9 12H17L20 4Z" fill={color} />
+    <circle cx="8" cy="10" r="2" fill={color} />
+    <circle cx="32" cy="28" r="2" fill={color} />
+    <circle cx="6" cy="32" r="1.5" fill={color} />
+  </svg>
+);
+
+export const CardIcon = ({ color }: SvgIconProps) => (
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="6" y="10" width="28" height="20" rx="2" stroke={color} strokeWidth="2" />
+    <line x1="6" y1="18" x2="34" y2="18" stroke={color} strokeWidth="2" />
+    <circle cx="12" cy="28" r="2" fill={color} />
+    <line x1="18" y1="27" x2="26" y2="27" stroke={color} strokeWidth="1.5" />
+  </svg>
+);
+
+export const DiamondIcon = ({ color }: SvgIconProps) => (
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20 4L28 12L34 26C34 28 32 30 30 30H10C8 30 6 28 6 26L12 12L20 4Z" fill={color} opacity="0.3" stroke={color} strokeWidth="2" />
+    <line x1="20" y1="4" x2="12" y2="12" stroke={color} strokeWidth="2" />
+    <line x1="20" y1="4" x2="28" y2="12" stroke={color} strokeWidth="2" />
+  </svg>
+);
+
+export const ShieldIcon = ({ color }: SvgIconProps) => (
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20 4L10 10V18C10 26 20 32 20 32C20 32 30 26 30 18V10L20 4Z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M16 22L18 24L24 18" stroke={color} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+export const MoneyIcon = ({ color }: SvgIconProps) => (
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="8" y="12" width="24" height="16" rx="2" stroke={color} strokeWidth="2" />
+    <circle cx="20" cy="20" r="4" stroke={color} strokeWidth="2" />
+    <line x1="10" y1="10" x2="6" y2="6" stroke={color} strokeWidth="2" strokeLinecap="round" />
+    <line x1="30" y1="30" x2="34" y2="34" stroke={color} strokeWidth="2" strokeLinecap="round" />
+  </svg>
+);
