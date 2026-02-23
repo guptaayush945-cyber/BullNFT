@@ -139,3 +139,29 @@ export const PulseIcon = ({ color }: SvgIconProps) => (
     <circle cx="20" cy="20" r="18" stroke={color} strokeWidth="1.5" opacity="0.3" />
   </svg>
 );
+
+export const ShareNetworkIcon = ({ color }: SvgIconProps) => (
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="20" cy="8" r="4" stroke={color} strokeWidth="2" />
+    <circle cx="10" cy="28" r="4" stroke={color} strokeWidth="2" />
+    <circle cx="30" cy="28" r="4" stroke={color} strokeWidth="2" />
+    <path d="M18 11L12 24" stroke={color} strokeWidth="2" strokeLinecap="round" />
+    <path d="M22 11L28 24" stroke={color} strokeWidth="2" strokeLinecap="round" />
+  </svg>
+);
+
+export const CopyIcon = ({ color }: SvgIconProps) => (
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="8" y="12" width="18" height="20" rx="2" stroke={color} strokeWidth="2" />
+    <path d="M26 18H28C29.1 18 30 18.9 30 20V32C30 33.1 29.1 34 28 34H16C14.9 34 14 33.1 14 32V30" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+export const ShareIcon = ({ color }: SvgIconProps) => (
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M28 10L12 22L28 34" stroke={color} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+    <circle cx="28" cy="10" r="4" stroke={color} strokeWidth="2.5" />
+    <circle cx="12" cy="22" r="4" stroke={color} strokeWidth="2.5" />
+    <circle cx="28" cy="34" r="4" stroke={color} strokeWidth="2.5" />
+  </svg>
+);

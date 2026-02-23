@@ -1,6 +1,7 @@
 import Header from '../components/Header';
 import BottomNavigation from '../components/BottomNavigation';
 import EarningsOverview from '../components/EarningsOverview';
+import NetworkOverview from '../components/NetworkOverview';
 import { CrownIcon, SparkleIcon, CardIcon, DiamondIcon, ShieldIcon, MoneyIcon } from '../components/SvgIcons';
 import '../styles/dashboard.css';
 
@@ -106,6 +107,9 @@ export default function Dashboard() {
 
           {/* Earnings Overview Section */}
           <EarningsOverview />
+
+          {/* Network Overview Section */}
+          <NetworkOverview />
           
         </main>
       </div>
