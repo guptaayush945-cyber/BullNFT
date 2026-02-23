@@ -213,3 +213,10 @@ export const CheckCircleIcon = ({ color }: SvgIconProps) => (
     <path d="M14 20L18 24L26 16" stroke={color} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
+
+export const ClockIcon = ({ color }: SvgIconProps) => (
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="20" cy="20" r="14" stroke={color} strokeWidth="2.5" />
+    <path d="M20 10V20L28 28" stroke={color} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);

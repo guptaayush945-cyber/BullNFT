@@ -14,7 +14,7 @@
 .team-section-title {
   font-size: 0.95rem;
   font-weight: 700;
-  color: #00C8FF;
+  color: #fff200;
   letter-spacing: 2px;
   text-transform: uppercase;
   margin: 0;
@@ -111,6 +111,16 @@
   box-shadow: 0 6px 24px rgba(0, 200, 150, 0.3);
 }
 
+.team-card:nth-child(4) .team-card-icon {
+  background: linear-gradient(135deg, rgba(255, 157, 0, 0.2) 0%, rgba(255, 157, 0, 0.05) 100%);
+  box-shadow: 0 4px 16px rgba(255, 157, 0, 0.2);
+}
+
+.team-card:nth-child(4):hover .team-card-icon {
+  transform: scale(1.1);
+  box-shadow: 0 6px 24px rgba(255, 157, 0, 0.3);
+}
+
 .team-card-icon svg {
   width: 28px;
   height: 28px;
@@ -200,7 +210,7 @@
   }
 
   .team-card-header {
-    margin-bottom: 1rem;
+    margin-bottom: 0px;
   }
 
   .team-card-title {

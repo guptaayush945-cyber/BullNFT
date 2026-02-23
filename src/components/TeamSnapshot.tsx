@@ -1,4 +1,4 @@
-import { UserIcon, TeamIcon, CheckCircleIcon } from './SvgIcons';
+import { UserIcon, TeamIcon, CheckCircleIcon, ClockIcon } from './SvgIcons';
 import '../styles/team-snapshot.css';
 
 export default function TeamSnapshot() {
@@ -32,6 +32,17 @@ export default function TeamSnapshot() {
       color: '#00C896',
       bgColor: 'rgba(0, 200, 150, 0.1)',
       borderColor: 'rgba(0, 200, 150, 0.3)',
+      showEmoji: true
+    },
+    {
+      id: 4,
+      title: 'INACTIVE',
+      value: 0,
+      description: 'View Details',
+      icon: ClockIcon,
+      color: '#ff9d00',
+      bgColor: 'rgba(255, 157, 0, 0.1)',
+      borderColor: 'rgba(255, 157, 0, 0.3)',
       showEmoji: true
     }
   ];
