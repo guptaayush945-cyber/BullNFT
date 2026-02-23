@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import BottomNavigation from '../components/BottomNavigation';
 import EarningsOverview from '../components/EarningsOverview';
+import TeamSnapshot from '../components/TeamSnapshot';
 import NetworkOverview from '../components/NetworkOverview';
 import { CrownIcon, SparkleIcon, CardIcon, DiamondIcon, ShieldIcon, MoneyIcon, MarketplaceIcon, WalletIcon, LightningIcon } from '../components/SvgIcons';
 import '../styles/dashboard.css';
@@ -118,7 +119,11 @@ export default function Dashboard() {
 
           {/* Earnings Overview Section */}
           <EarningsOverview />
-  {/* Navigation Cards */}
+
+          {/* Team Breakdown Section */}
+          <TeamSnapshot />
+
+          {/* Navigation Cards */}
           <div className="navigation-cards">
             {navigationCards.map((card) => {
               const IconComponent = card.icon;

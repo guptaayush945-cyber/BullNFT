@@ -188,3 +188,28 @@ export const LightningIcon = ({ color }: SvgIconProps) => (
     <path d="M20 4L24 14H34L26 20L30 30L20 24L10 30L14 20L6 14H16L20 4Z" fill={color} />
   </svg>
 );
+
+export const UserIcon = ({ color }: SvgIconProps) => (
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="20" cy="14" r="6" stroke={color} strokeWidth="2.5" />
+    <path d="M8 32C8 24.8366 13.3726 19 20 19C26.6274 19 32 24.8366 32 32" stroke={color} strokeWidth="2.5" strokeLinecap="round" />
+  </svg>
+);
+
+export const TeamIcon = ({ color }: SvgIconProps) => (
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="12" r="5" stroke={color} strokeWidth="2.5" />
+    <circle cx="28" cy="12" r="5" stroke={color} strokeWidth="2.5" />
+    <circle cx="20" cy="22" r="5" stroke={color} strokeWidth="2.5" />
+    <path d="M7 20C7 18 8 17 12 17" stroke={color} strokeWidth="2.5" strokeLinecap="round" />
+    <path d="M33 20C33 18 32 17 28 17" stroke={color} strokeWidth="2.5" strokeLinecap="round" />
+    <path d="M15 28C15 26 17 25 20 25C23 25 25 26 25 28" stroke={color} strokeWidth="2.5" strokeLinecap="round" />
+  </svg>
+);
+
+export const CheckCircleIcon = ({ color }: SvgIconProps) => (
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="20" cy="20" r="16" stroke={color} strokeWidth="2.5" />
+    <path d="M14 20L18 24L26 16" stroke={color} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
