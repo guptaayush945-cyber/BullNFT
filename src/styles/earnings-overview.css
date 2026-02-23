@@ -352,7 +352,7 @@
   }
 
   .earnings-stats {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
   }
 
@@ -459,5 +459,26 @@
 
   .insight-day {
     font-size: 0.9rem;
+  }
+
+  .earnings-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+  }
+
+  .stat-box {
+    padding: 0.9rem 0.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.65rem;
+  }
+
+  .stat-amount {
+    font-size: 1.2rem;
+  }
+
+  .stat-currency {
+    font-size: 0.7rem;
   }
 }
