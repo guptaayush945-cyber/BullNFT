@@ -149,16 +149,16 @@
   gap: 1.5rem;
   margin-top: 1.5rem;
 }
-
 .stat-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1.2rem;
-  background: linear-gradient(135deg, rgba(255, 215, 0, 0.05) 0%, rgba(30, 30, 30, 0.5) 100%);
-  border: 1px solid rgba(255, 215, 0, 0.15);
-  border-radius: 12px;
-  transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2rem;
+    /* background: linear-gradient(135deg, rgba(255, 215, 0, 0.05) 0%, rgba(30, 30, 30, 0.5) 100%); */
+    /* border: 1px solid rgba(255, 215, 0, 0.15); */
+    /* border-radius: 12px; */
+    transition: all 0.3s ease;
+    padding: 0px !important;
 }
 
 .stat-box:hover {
@@ -205,15 +205,15 @@
 
 .insights-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.2rem;
 }
 
 .insight-card {
   background: linear-gradient(135deg, rgba(30, 30, 30, 0.9) 0%, rgba(20, 20, 20, 0.95) 100%);
-  border: 1px solid rgba(100, 100, 100, 0.3);
-  border-radius: 16px;
-  padding: 1.5rem;
+  border: 2px solid rgba(100, 100, 100, 0.3);
+  border-radius: 20px;
+  padding: 1.8rem 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -231,61 +231,102 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, transparent 100%);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.05) 0%, transparent 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
 }
 
 .insight-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(255, 215, 0, 0.4);
+  transform: translateY(-6px);
 }
 
 .insight-card:hover::before {
   opacity: 1;
 }
 
+/* Icon Wrapper */
+.insight-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(139, 98, 230, 0.2) 0%, rgba(30, 30, 30, 0.8) 100%);
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.insight-card:hover .insight-icon-wrapper {
+  transform: scale(1.1);
+}
+
+.insight-icon-wrapper svg {
+  width: 40px;
+  height: 40px;
+}
+
 /* Best Day Card */
 .best-day-card {
-  border-color: rgba(0, 200, 150, 0.3);
+  border-color: rgba(0, 200, 150, 0.4);
 }
 
 .best-day-card:hover {
-  border-color: rgba(0, 200, 150, 0.6);
-  box-shadow: 0 8px 24px rgba(0, 200, 150, 0.2);
+  border-color: rgba(0, 200, 150, 0.7);
+  box-shadow: 0 8px 32px rgba(0, 200, 150, 0.25);
 }
 
-.best-day-card::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  right: -50%;
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, rgba(0, 200, 150, 0.1) 0%, transparent 70%);
-  pointer-events: none;
+.best-day {
+  background: linear-gradient(135deg, rgba(0, 200, 150, 0.25) 0%, rgba(0, 200, 150, 0.05) 100%);
+  border: 2px solid rgba(0, 200, 150, 0.4);
 }
 
 /* Lowest Day Card */
 .lowest-day-card {
-  border-color: rgba(255, 100, 50, 0.3);
+  border-color: rgba(255, 100, 50, 0.4);
 }
 
 .lowest-day-card:hover {
-  border-color: rgba(255, 100, 50, 0.6);
-  box-shadow: 0 8px 24px rgba(255, 100, 50, 0.2);
+  border-color: rgba(255, 100, 50, 0.7);
+  box-shadow: 0 8px 32px rgba(255, 100, 50, 0.25);
 }
 
-.lowest-day-card::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  right: -50%;
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, rgba(255, 100, 50, 0.1) 0%, transparent 70%);
-  pointer-events: none;
+.lowest-day {
+  background: linear-gradient(135deg, rgba(255, 100, 50, 0.25) 0%, rgba(255, 100, 50, 0.05) 100%);
+  border: 2px solid rgba(255, 100, 50, 0.4);
+}
+
+/* Avg Earnings Card */
+.avg-earnings-card {
+  border-color: rgba(155, 111, 230, 0.4);
+}
+
+.avg-earnings-card:hover {
+  border-color: rgba(155, 111, 230, 0.7);
+  box-shadow: 0 8px 32px rgba(155, 111, 230, 0.25);
+}
+
+.avg-earnings {
+  background: linear-gradient(135deg, rgba(155, 111, 230, 0.25) 0%, rgba(155, 111, 230, 0.05) 100%);
+  border: 2px solid rgba(155, 111, 230, 0.4);
+}
+
+/* Stability Card */
+.stability-card {
+  border-color: rgba(0, 200, 150, 0.4);
+}
+
+.stability-card:hover {
+  border-color: rgba(0, 200, 150, 0.7);
+  box-shadow: 0 8px 32px rgba(0, 200, 150, 0.25);
+}
+
+.stability {
+  background: linear-gradient(135deg, rgba(0, 200, 150, 0.25) 0%, rgba(0, 200, 150, 0.05) 100%);
+  border: 2px solid rgba(0, 200, 150, 0.4);
 }
 
 /* Insight Card Content */
@@ -305,11 +346,29 @@
   color: #FFD700;
   position: relative;
   z-index: 1;
+  margin-bottom: 0.2rem;
+}
+
+.insight-currency {
+  font-size: 0.8rem;
+  color: rgba(200, 200, 200, 0.6);
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
 }
 
 .insight-day {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: rgba(200, 200, 200, 0.7);
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+  margin-top: 0.2rem;
+}
+
+.insight-subtitle {
+  font-size: 0.85rem;
+  color: rgba(200, 200, 200, 0.6);
   font-weight: 500;
   position: relative;
   z-index: 1;
@@ -365,8 +424,26 @@
   }
 
   .insights-cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+  }
+
+  .insight-card {
+    padding: 1.4rem 1rem;
+  }
+
+  .insight-icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+
+  .insight-icon-wrapper svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .insight-value {
+    font-size: 1.6rem;
   }
 }
 
@@ -449,16 +526,39 @@
     border-radius: 12px;
   }
 
+  .insight-icon-wrapper {
+    width: 55px;
+    height: 55px;
+  }
+
+  .insight-icon-wrapper svg {
+    width: 32px;
+    height: 32px;
+  }
+
   .insight-label {
     font-size: 0.7rem;
   }
 
   .insight-value {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+  }
+
+  .insight-currency {
+    font-size: 0.75rem;
   }
 
   .insight-day {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+  }
+
+  .insight-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .insights-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
   }
 
   .earnings-stats {

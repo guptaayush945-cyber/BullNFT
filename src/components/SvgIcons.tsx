@@ -109,3 +109,33 @@ export const MoneyIcon = ({ color }: SvgIconProps) => (
     <line x1="30" y1="30" x2="34" y2="34" stroke={color} strokeWidth="2" strokeLinecap="round" />
   </svg>
 );
+
+export const TrendUpIcon = ({ color }: SvgIconProps) => (
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8 28L16 16L24 22L32 10" stroke={color} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M26 10H32V16" stroke={color} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+export const TrendDownIcon = ({ color }: SvgIconProps) => (
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8 10L16 22L24 16L32 28" stroke={color} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M26 28H32V22" stroke={color} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+export const BarChartIconSmall = ({ color }: SvgIconProps) => (
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="8" y="22" width="4" height="12" fill={color} />
+    <rect x="14" y="16" width="4" height="18" fill={color} />
+    <rect x="20" y="10" width="4" height="24" fill={color} />
+    <rect x="26" y="18" width="4" height="16" fill={color} />
+  </svg>
+);
+
+export const PulseIcon = ({ color }: SvgIconProps) => (
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 20L10 20L14 10L16 28L20 16L24 26L28 20L36 20" stroke={color} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+    <circle cx="20" cy="20" r="18" stroke={color} strokeWidth="1.5" opacity="0.3" />
+  </svg>
+);
