@@ -14,10 +14,11 @@
 .network-section-title {
   font-size: 0.95rem;
   font-weight: 700;
-  color: #B13FFF;
+  color: #fff200;
   letter-spacing: 2px;
   text-transform: uppercase;
   margin: 0;
+  text-align: center;
 }
 
 /* Referral Card */
@@ -28,11 +29,11 @@
   margin: 0 1.5rem;
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
-  box-shadow: 0 8px 32px rgba(177, 63, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.15);
 }
 
 .referral-card:hover {
-  box-shadow: 0 12px 40px rgba(177, 63, 255, 0.25);
+  box-shadow: 0 12px 40px rgba(255, 215, 0, 0.25);
   transform: translateY(-4px);
 }
 
@@ -49,17 +50,17 @@
   height: 80px;
   min-width: 80px;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(177, 63, 255, 0.2) 0%, rgba(30, 30, 30, 0.8) 100%);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(30, 30, 30, 0.8) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 16px rgba(177, 63, 255, 0.3);
+  box-shadow: 0 4px 16px rgba(255, 215, 0, 0.35);
   transition: all 0.3s ease;
 }
 
 .referral-card:hover .referral-icon-wrapper {
   transform: scale(1.12);
-  box-shadow: 0 8px 24px rgba(177, 63, 255, 0.45);
+  box-shadow: 0 8px 24px rgba(255, 215, 0, 0.45);
 }
 
 .referral-icon-wrapper svg {
@@ -97,7 +98,7 @@
 .referral-link-section {
   margin-bottom: 2rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(177, 63, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
 }
 
 .referral-link-label {
@@ -118,8 +119,8 @@
 
 .referral-link-input {
   flex: 1;
-  background: linear-gradient(135deg, rgba(177, 63, 255, 0.05) 0%, rgba(30, 30, 30, 0.5) 100%);
-  border: 1px solid rgba(177, 63, 255, 0.3);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.05) 0%, rgba(30, 30, 30, 0.5) 100%);
+  border: 1px solid rgba(255, 215, 0, 0.3);
   border-radius: 12px;
   padding: 0.85rem 1.2rem;
   color: rgba(200, 200, 200, 0.8);
@@ -131,9 +132,9 @@
 
 .referral-link-input:focus {
   outline: none;
-  border-color: rgba(177, 63, 255, 0.6);
-  background: linear-gradient(135deg, rgba(177, 63, 255, 0.1) 0%, rgba(40, 40, 40, 0.6) 100%);
-  box-shadow: 0 4px 16px rgba(177, 63, 255, 0.2);
+  border-color: rgba(255, 215, 0, 0.6);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(40, 40, 40, 0.6) 100%);
+  box-shadow: 0 4px 16px rgba(255, 215, 0, 0.2);
 }
 
 .referral-link-input::selection {
@@ -175,12 +176,12 @@
 .share-link-button {
   width: 100%;
   padding: 0.9rem 1.5rem;
-  background: linear-gradient(135deg, #DA1FFF 0%, #B13FFF 100%);
+  background: linear-gradient(135deg, #FFD700 0%, #FFC700 100%);
   border: none;
   border-radius: 14px;
   font-size: 1rem;
   font-weight: 700;
-  color: #fff;
+  color: #000;
   cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
@@ -189,13 +190,13 @@
   gap: 0.6rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  box-shadow: 0 6px 20px rgba(218, 31, 255, 0.3);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
 }
 
 .share-link-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(218, 31, 255, 0.45);
-  background: linear-gradient(135deg, #E93FFF 0%, #C950FF 100%);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.45);
+  background: linear-gradient(135deg, #FFE700 0%, #FFD700 100%);
 }
 
 .share-link-button:active {

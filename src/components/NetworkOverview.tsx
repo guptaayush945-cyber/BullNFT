@@ -35,7 +35,7 @@ export default function NetworkOverview() {
         {/* Card Header */}
         <div className="referral-header">
           <div className="referral-icon-wrapper">
-            <ShareNetworkIcon color="#B13FFF" />
+            <ShareNetworkIcon color="#FFD700" />
           </div>
           <div className="referral-header-content">
             <h3 className="referral-title">Referral Program</h3>
