@@ -38,6 +38,7 @@ export default function Header() {
         <div className="mobile-menu">
           <nav className="menu-items">
             <a href="/" onClick={(e) => handleMenuClick('/home', e)}>Home</a>
+            <a href="/" onClick={(e) => handleMenuClick('/dashboard', e)}>Dashboard</a>
             <a href="/" onClick={(e) => handleMenuClick('/marketplace', e)}>Marketplace</a>
             <a href="/" onClick={(e) => handleMenuClick('/upgrade', e)}>Upgrade Plan</a>
             <a href="/" onClick={(e) => handleMenuClick('/about', e)}>Bull Pass</a>
