@@ -20,7 +20,7 @@
 .dashboard-title {
   font-size: 1.8rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #DA1FFF 0%, #B13FFF 100%);
+  background: linear-gradient(135deg, #ffd700 0%, #ffffff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -33,7 +33,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.8rem;
-  background: linear-gradient(135deg, rgba(138, 43, 226, 0.3) 0%, rgba(75, 0, 130, 0.3) 100%);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.4) 0%, rgb(255 255 255 / 10%) 100%);
   border: 1px solid rgba(138, 43, 226, 0.5);
   border-radius: 30px;
   padding: 0.8rem 1.5rem;
@@ -45,7 +45,7 @@
 }
 
 .badge-text {
-  color: #B3A7FF;
+  color: #ffd700;
   font-weight: 600;
   font-size: 0.95rem;
 }
@@ -70,7 +70,7 @@
 
 .dashboard-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(200, 150, 255, 0.3);
+  border-color: rgba(255, 215, 0, 0.5);
 }
 
 /* Card Header */
@@ -78,7 +78,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.2rem;
+  margin-bottom: 0px;
 }
 
 .card-title {
@@ -117,47 +117,50 @@
 
 /* SOL Card */
 .sol-card {
-  border-color: rgba(0, 212, 255, 0.2);
-  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(0, 150, 200, 0.05) 100%);
+  border-color: rgba(255, 215, 0, 0.3);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.08) 0%, rgba(20, 20, 20, 0.9) 100%);
 }
 
 .sol-card:hover {
-  border-color: rgba(0, 212, 255, 0.4);
-  background: linear-gradient(135deg, rgba(0, 212, 255, 0.15) 0%, rgba(0, 150, 200, 0.1) 100%);
+  border-color: rgba(255, 215, 0, 0.5);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.12) 0%, rgba(30, 30, 30, 0.95) 100%);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
 }
 
 .sol-card .amount {
-  color: #00D4FF;
+  color: #FFD700;
 }
 
 /* USDT Card */
 .usdt-card {
-  border-color: rgba(138, 43, 226, 0.2);
-  background: linear-gradient(135deg, rgba(138, 43, 226, 0.1) 0%, rgba(75, 0, 130, 0.05) 100%);
+  border-color: rgba(255, 215, 0, 0.3);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.08) 0%, rgba(20, 20, 20, 0.9) 100%);
 }
 
 .usdt-card:hover {
-  border-color: rgba(138, 43, 226, 0.4);
-  background: linear-gradient(135deg, rgba(138, 43, 226, 0.15) 0%, rgba(75, 0, 130, 0.1) 100%);
+  border-color: rgba(255, 215, 0, 0.5);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.12) 0%, rgba(30, 30, 30, 0.95) 100%);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
 }
 
 .usdt-card .amount {
-  color: #B3A7FF;
+  color: #FFD700;
 }
 
 /* Diamonds Card */
 .diamonds-card {
-  border-color: rgba(0, 212, 255, 0.2);
-  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(0, 150, 200, 0.05) 100%);
+  border-color: rgba(255, 215, 0, 0.3);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.08) 0%, rgba(20, 20, 20, 0.9) 100%);
 }
 
 .diamonds-card:hover {
-  border-color: rgba(0, 212, 255, 0.4);
-  background: linear-gradient(135deg, rgba(0, 212, 255, 0.15) 0%, rgba(0, 150, 200, 0.1) 100%);
+  border-color: rgba(255, 215, 0, 0.5);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.12) 0%, rgba(30, 30, 30, 0.95) 100%);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
 }
 
 .diamonds-card .amount {
-  color: #00D4FF;
+  color: #FFD700;
 }
 
 /* Level Card */
@@ -181,8 +184,8 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(34, 255, 136, 0.2) 0%, rgba(34, 255, 136, 0.1) 100%);
-  border: 2px solid rgba(34, 255, 136, 0.4);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(218, 165, 32, 0.1) 100%);
+  border: 2px solid rgba(255, 215, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -201,17 +204,18 @@
 
 /* Income Card */
 .income-card {
-  border-color: rgba(34, 255, 136, 0.2);
-  background: linear-gradient(135deg, rgba(34, 255, 136, 0.1) 0%, rgba(34, 255, 136, 0.05) 100%);
+  border-color: rgba(255, 215, 0, 0.3);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.08) 0%, rgba(20, 20, 20, 0.9) 100%);
 }
 
 .income-card:hover {
-  border-color: rgba(34, 255, 136, 0.4);
-  background: linear-gradient(135deg, rgba(34, 255, 136, 0.15) 0%, rgba(34, 255, 136, 0.1) 100%);
+  border-color: rgba(255, 215, 0, 0.5);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.12) 0%, rgba(30, 30, 30, 0.95) 100%);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
 }
 
 .income-card .amount {
-  color: #22FF88;
+  color: #FFD700;
 }
 
 /* Responsive Design */
@@ -258,7 +262,7 @@
   }
 
   .dashboard-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 1rem;
   }
 
