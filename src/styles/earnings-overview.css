@@ -197,10 +197,11 @@
 .insights-title {
   font-size: 0.95rem;
   font-weight: 700;
-  color: #8B62E6;
+  color: #fff200;
   letter-spacing: 2px;
   text-transform: uppercase;
   margin: 0 0 1.5rem 0;
+  text-align: center;
 }
 
 .insights-cards {
@@ -213,12 +214,12 @@
   background: linear-gradient(135deg, rgba(30, 30, 30, 0.9) 0%, rgba(20, 20, 20, 0.95) 100%);
   border: 2px solid rgba(100, 100, 100, 0.3);
   border-radius: 20px;
-  padding: 1.8rem 1.5rem;
+  padding: 1.5rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 0.8rem;
+  justify-content: flex-start;
+  gap: 1rem;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -249,15 +250,16 @@
 .insight-icon-wrapper {
   width: 70px;
   height: 70px;
+  min-width: 70px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, rgba(139, 98, 230, 0.2) 0%, rgba(30, 30, 30, 0.8) 100%);
-  margin-bottom: 0.5rem;
   position: relative;
   z-index: 2;
   transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
 .insight-card:hover .insight-icon-wrapper {
@@ -267,6 +269,16 @@
 .insight-icon-wrapper svg {
   width: 40px;
   height: 40px;
+}
+
+/* Insight Content Wrapper */
+.insight-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.3rem;
+  flex: 1;
 }
 
 /* Best Day Card */
@@ -331,47 +343,51 @@
 
 /* Insight Card Content */
 .insight-label {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 600;
   color: rgba(200, 200, 200, 0.6);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   position: relative;
   z-index: 1;
+  margin: 0;
 }
 
 .insight-value {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #FFD700;
   position: relative;
   z-index: 1;
-  margin-bottom: 0.2rem;
+  margin: 0.2rem 0 0 0;
+  line-height: 1.2;
 }
 
 .insight-currency {
+  font-size: 0.75rem;
+  color: rgba(200, 200, 200, 0.6);
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+}
+
+.insight-day {
+  font-size: 0.85rem;
+  color: rgba(200, 200, 200, 0.7);
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+  margin: 0.2rem 0 0 0;
+}
+
+.insight-subtitle {
   font-size: 0.8rem;
   color: rgba(200, 200, 200, 0.6);
   font-weight: 500;
   position: relative;
   z-index: 1;
-}
-
-.insight-day {
-  font-size: 0.9rem;
-  color: rgba(200, 200, 200, 0.7);
-  font-weight: 500;
-  position: relative;
-  z-index: 1;
-  margin-top: 0.2rem;
-}
-
-.insight-subtitle {
-  font-size: 0.85rem;
-  color: rgba(200, 200, 200, 0.6);
-  font-weight: 500;
-  position: relative;
-  z-index: 1;
+  margin: 0;
 }
 
 /* Responsive Design */
@@ -423,18 +439,15 @@
     font-size: 1.5rem;
   }
 
-  .insights-cards {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-
   .insight-card {
-    padding: 1.4rem 1rem;
+    padding: 1.2rem;
+    gap: 1rem;
   }
 
   .insight-icon-wrapper {
     width: 60px;
     height: 60px;
+    min-width: 60px;
   }
 
   .insight-icon-wrapper svg {
@@ -443,7 +456,11 @@
   }
 
   .insight-value {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+  }
+
+  .insight-label {
+    font-size: 0.65rem;
   }
 }
 
@@ -512,7 +529,7 @@
   }
 
   .earnings-insights {
-    padding: 0 1rem;
+    padding: 0px;
     margin-top: 1.5rem;
   }
 
@@ -522,38 +539,40 @@
   }
 
   .insight-card {
-    padding: 1.2rem;
+    padding: 1rem;
     border-radius: 12px;
+    gap: 0.8rem;
   }
 
   .insight-icon-wrapper {
-    width: 55px;
-    height: 55px;
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
   }
 
   .insight-icon-wrapper svg {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
   }
 
   .insight-label {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
   }
 
   .insight-value {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .insight-currency {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
   }
 
   .insight-day {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 
   .insight-subtitle {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
 
   .insights-cards {

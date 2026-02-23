@@ -103,10 +103,12 @@ export default function EarningsOverview() {
             <div className="insight-icon-wrapper best-day">
               <TrendUpIcon color="#00C896" />
             </div>
-            <span className="insight-label">BEST DAY</span>
-            <span className="insight-value">{stats.bestDayValue}</span>
-            <span className="insight-currency">USDT</span>
-            <span className="insight-day">{stats.bestDay}</span>
+            <div className="insight-content">
+              <span className="insight-label">BEST DAY</span>
+              <span className="insight-value">{stats.bestDayValue}</span>
+              <span className="insight-currency">USDT</span>
+              <span className="insight-day">{stats.bestDay}</span>
+            </div>
           </div>
 
           {/* Lowest Day Card */}
@@ -114,10 +116,12 @@ export default function EarningsOverview() {
             <div className="insight-icon-wrapper lowest-day">
               <TrendDownIcon color="#FF6432" />
             </div>
-            <span className="insight-label">LOWEST DAY</span>
-            <span className="insight-value">{stats.lowestDayValue}</span>
-            <span className="insight-currency">USDT</span>
-            <span className="insight-day">{stats.lowestDay}</span>
+            <div className="insight-content">
+              <span className="insight-label">LOWEST DAY</span>
+              <span className="insight-value">{stats.lowestDayValue}</span>
+              <span className="insight-currency">USDT</span>
+              <span className="insight-day">{stats.lowestDay}</span>
+            </div>
           </div>
 
           {/* Avg Earnings Card */}
@@ -125,10 +129,12 @@ export default function EarningsOverview() {
             <div className="insight-icon-wrapper avg-earnings">
               <BarChartIconSmall color="#9B6FE6" />
             </div>
-            <span className="insight-label">AVG EARNINGS</span>
-            <span className="insight-value">{stats.avgEarnings}</span>
-            <span className="insight-currency">USDT</span>
-            <span className="insight-subtitle">per day</span>
+            <div className="insight-content">
+              <span className="insight-label">AVG EARNINGS</span>
+              <span className="insight-value">{stats.avgEarnings}</span>
+              <span className="insight-currency">USDT</span>
+              <span className="insight-subtitle">per day</span>
+            </div>
           </div>
 
           {/* Stability Card */}
@@ -136,9 +142,11 @@ export default function EarningsOverview() {
             <div className="insight-icon-wrapper stability">
               <PulseIcon color="#00C896" />
             </div>
-            <span className="insight-label">STABILITY</span>
-            <span className="insight-value">{stats.stability}</span>
-            <span className="insight-subtitle">{stats.stabilityStatus}</span>
+            <div className="insight-content">
+              <span className="insight-label">STABILITY</span>
+              <span className="insight-value">{stats.stability}</span>
+              <span className="insight-subtitle">{stats.stabilityStatus}</span>
+            </div>
           </div>
         </div>
       </div>
