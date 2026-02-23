@@ -165,3 +165,26 @@ export const ShareIcon = ({ color }: SvgIconProps) => (
     <circle cx="28" cy="34" r="4" stroke={color} strokeWidth="2.5" />
   </svg>
 );
+
+export const MarketplaceIcon = ({ color }: SvgIconProps) => (
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8 14L10 8H30L32 14" stroke={color} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M10 14L12 32H28L30 14" stroke={color} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+    <circle cx="16" cy="20" r="1.5" fill={color} />
+    <circle cx="24" cy="20" r="1.5" fill={color} />
+  </svg>
+);
+
+export const WalletIcon = ({ color }: SvgIconProps) => (
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="6" y="10" width="28" height="20" rx="2" stroke={color} strokeWidth="2.5" />
+    <path d="M6 16H34" stroke={color} strokeWidth="2.5" strokeLinecap="round" />
+    <circle cx="28" cy="25" r="2.5" stroke={color} strokeWidth="2" />
+  </svg>
+);
+
+export const LightningIcon = ({ color }: SvgIconProps) => (
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20 4L24 14H34L26 20L30 30L20 24L10 30L14 20L6 14H16L20 4Z" fill={color} />
+  </svg>
+);

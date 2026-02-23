@@ -1,11 +1,13 @@
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import BottomNavigation from '../components/BottomNavigation';
 import EarningsOverview from '../components/EarningsOverview';
 import NetworkOverview from '../components/NetworkOverview';
-import { CrownIcon, SparkleIcon, CardIcon, DiamondIcon, ShieldIcon, MoneyIcon } from '../components/SvgIcons';
+import { CrownIcon, SparkleIcon, CardIcon, DiamondIcon, ShieldIcon, MoneyIcon, MarketplaceIcon, WalletIcon, LightningIcon } from '../components/SvgIcons';
 import '../styles/dashboard.css';
 
 export default function Dashboard() {
+  const navigate = useNavigate();
   const dashboardData = {
     title: 'Track your earnings, team performance, and trading activity',
     memberStatus: 'Royal Member',
@@ -15,6 +17,13 @@ export default function Dashboard() {
     currentLevel: 'Silver',
     totalIncome: '12.50'
   };
+
+  const navigationCards = [
+    { id: 1, title: 'Marketplace', icon: MarketplaceIcon, color: '#B13FFF', route: '/marketplace' },
+    { id: 2, title: 'My NFTs', icon: WalletIcon, color: '#00A3FF', route: '/mynfts' },
+    { id: 3, title: 'Upgrade Plan', icon: LightningIcon, color: '#FF6432', route: '/upgrade' },
+    { id: 4, title: 'Rewards', icon: DiamondIcon, color: '#FF1493', route: '/royalty' }
+  ];
 
   return (
     <>
@@ -105,9 +114,28 @@ export default function Dashboard() {
             </div>
           </div>
 
+        
+
           {/* Earnings Overview Section */}
           <EarningsOverview />
-
+  {/* Navigation Cards */}
+          <div className="navigation-cards">
+            {navigationCards.map((card) => {
+              const IconComponent = card.icon;
+              return (
+                <div
+                  key={card.id}
+                  className="nav-card"
+                  onClick={() => navigate(card.route)}
+                >
+                  <div className="nav-card-icon-wrapper">
+                    <IconComponent color={card.color} />
+                  </div>
+                  <h3 className="nav-card-title">{card.title}</h3>
+                </div>
+              );
+            })}
+          </div>
           {/* Network Overview Section */}
           <NetworkOverview />
           
