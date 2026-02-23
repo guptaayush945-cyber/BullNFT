@@ -20,7 +20,7 @@ export default function CardsGrid() {
           icon={<ChartIcon color="#00d4ff" />}
           label="7D"
           amount="$ 0.00"
-          title="7-DAY TOTAL"
+          title="TOTAL EARNINGS"
           showChart={true}
           chartType="line"
           colorType="blue"
