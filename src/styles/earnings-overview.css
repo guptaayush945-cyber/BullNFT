@@ -256,7 +256,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(139, 98, 230, 0.2) 0%, rgba(30, 30, 30, 0.8) 100%);
   position: relative;
   z-index: 2;
   transition: all 0.3s ease;
