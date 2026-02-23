@@ -220,3 +220,34 @@ export const ClockIcon = ({ color }: SvgIconProps) => (
     <path d="M20 10V20L28 28" stroke={color} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
+
+export const StarIcon = ({ color }: SvgIconProps) => (
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20 4L25 16H38L28 23L33 35L20 28L7 35L12 23L2 16H15L20 4Z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+  </svg>
+);
+
+export const RocketIcon = ({ color }: SvgIconProps) => (
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20 4C20 4 10 14 10 22C10 28.6 14.5 34 20 34C25.5 34 30 28.6 30 22C30 14 20 4 20 4Z" stroke={color} strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M15 28C13 32 10 36 10 36M25 28C27 32 30 36 30 36M18 22L22 22" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+export const UsersInsightIcon = ({ color }: SvgIconProps) => (
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="15" cy="12" r="4" stroke={color} strokeWidth="2.5" />
+    <path d="M8 24C8 20 11 18 15 18C19 18 22 20 22 24" stroke={color} strokeWidth="2.5" strokeLinecap="round" />
+    <circle cx="28" cy="14" r="4" stroke={color} strokeWidth="2.5" />
+    <path d="M22 26C22 22 25 20 28 20C31 20 34 22 34 26" stroke={color} strokeWidth="2.5" strokeLinecap="round" />
+    <path d="M8 28C8 24 11 22 15 22C19 22 22 24 22 28" stroke={color} strokeWidth="2.5" strokeLinecap="round" />
+  </svg>
+);
+
+export const StackIcon = ({ color }: SvgIconProps) => (
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8 16L20 8L32 16" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+    <path d="M8 16L20 24L32 16" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+    <path d="M8 24L20 32L32 24" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+  </svg>
+);

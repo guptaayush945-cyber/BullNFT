@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import BottomNavigation from '../components/BottomNavigation';
 import EarningsOverview from '../components/EarningsOverview';
 import TeamSnapshot from '../components/TeamSnapshot';
+import TeamAnalytics from '../components/TeamAnalytics';
 import NetworkOverview from '../components/NetworkOverview';
 import { CrownIcon, SparkleIcon, CardIcon, DiamondIcon, ShieldIcon, MoneyIcon, MarketplaceIcon, WalletIcon, LightningIcon } from '../components/SvgIcons';
 import '../styles/dashboard.css';
@@ -120,9 +121,7 @@ export default function Dashboard() {
           {/* Earnings Overview Section */}
           <EarningsOverview />
 
-          {/* Team Breakdown Section */}
-          <TeamSnapshot />
-
+        
           {/* Navigation Cards */}
           <div className="navigation-cards">
             {navigationCards.map((card) => {
@@ -143,7 +142,12 @@ export default function Dashboard() {
           </div>
           {/* Network Overview Section */}
           <NetworkOverview />
-          
+            {/* Team Breakdown Section */}
+          <TeamSnapshot />
+
+          {/* Team Analytics Section */}
+          <TeamAnalytics />
+
         </main>
       </div>
       <BottomNavigation />
