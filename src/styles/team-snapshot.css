@@ -201,7 +201,7 @@
 
   .team-cards {
     gap: 0.8rem;
-    padding: 0 0.8rem;
+    padding: 0px;
   }
 
   .team-card {

@@ -56,7 +56,7 @@ export default function TeamAnalytics() {
       {/* Section Header */}
       <div className="analytics-header">
         <div className="analytics-header-icon">
-          <TeamIcon color="#00C8FF" />
+          <TeamIcon color="#fff200" />
         </div>
         <div className="analytics-header-content">
           <h2 className="analytics-title">Team Analytics</h2>
@@ -100,7 +100,7 @@ export default function TeamAnalytics() {
                     className="depth-bar-fill" 
                     style={{ 
                       width: `${(level.value / level.max) * 100}%`,
-                      backgroundColor: index === 0 ? '#00C8FF' : 'rgba(0, 200, 200, 0.3)'
+                      backgroundColor: index === 0 ? '#fbff00' : 'rgba(0, 200, 200, 0.3)'
                     }}
                   ></div>
                 </div>
