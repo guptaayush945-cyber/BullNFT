@@ -1,0 +1,463 @@
+/* Earnings Overview Container */
+.earnings-overview-container {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Section Header */
+.earnings-section-header {
+  margin-bottom: 1.5rem;
+  padding: 0 1.5rem;
+}
+
+.earnings-section-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #8B62E6;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Main Earnings Card */
+.earnings-card {
+  background: linear-gradient(135deg, rgba(30, 30, 30, 0.9) 0%, rgba(20, 20, 20, 0.95) 100%);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  margin: 0 1.5rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.earnings-card:hover {
+  border-color: rgba(255, 215, 0, 0.4);
+  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.15);
+}
+
+/* Card Header */
+.earnings-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.earnings-header-content {
+  flex: 1;
+}
+
+.earnings-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.3;
+}
+
+.earnings-card-subtitle {
+  font-size: 0.95rem;
+  color: rgba(200, 200, 200, 0.6);
+  margin: 0;
+}
+
+.earnings-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(138, 43, 226, 0.1) 100%);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.earnings-icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+/* Chart Section */
+.earnings-chart {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.chart-bars {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  min-height: 200px;
+  gap: 1rem;
+}
+
+.chart-bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  gap: 0.8rem;
+}
+
+.chart-bar-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  height: 180px;
+}
+
+.chart-bar {
+  width: 32px;
+  background: linear-gradient(180deg, #8B62E6 0%, #5E42B0 100%);
+  border-radius: 8px 8px 0 0;
+  min-height: 20px;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(139, 98, 230, 0.4);
+}
+
+.chart-bar:hover {
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+  background: linear-gradient(180deg, #A878FF 0%, #7B5AE6 100%);
+}
+
+.bar-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(139, 98, 230, 0.5) 0%, transparent 100%);
+  border-radius: 8px 8px 0 0;
+}
+
+.chart-day {
+  font-size: 0.85rem;
+  color: rgba(200, 200, 200, 0.7);
+  font-weight: 500;
+}
+
+/* Stats Section */
+.earnings-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.stat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.2rem;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.05) 0%, rgba(30, 30, 30, 0.5) 100%);
+  border: 1px solid rgba(255, 215, 0, 0.15);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+  border-color: rgba(255, 215, 0, 0.3);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(40, 40, 40, 0.6) 100%);
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: rgba(200, 200, 200, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.stat-amount {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #FFD700;
+  margin-bottom: 0.3rem;
+}
+
+.stat-currency {
+  font-size: 0.75rem;
+  color: rgba(200, 200, 200, 0.5);
+  font-weight: 500;
+}
+
+/* Insights Section */
+.earnings-insights {
+  margin-top: 2rem;
+  padding: 0 1.5rem;
+}
+
+.insights-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #8B62E6;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 1.5rem 0;
+}
+
+.insights-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.insight-card {
+  background: linear-gradient(135deg, rgba(30, 30, 30, 0.9) 0%, rgba(20, 20, 20, 0.95) 100%);
+  border: 1px solid rgba(100, 100, 100, 0.3);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.insight-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.insight-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 215, 0, 0.4);
+}
+
+.insight-card:hover::before {
+  opacity: 1;
+}
+
+/* Best Day Card */
+.best-day-card {
+  border-color: rgba(0, 200, 150, 0.3);
+}
+
+.best-day-card:hover {
+  border-color: rgba(0, 200, 150, 0.6);
+  box-shadow: 0 8px 24px rgba(0, 200, 150, 0.2);
+}
+
+.best-day-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(0, 200, 150, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Lowest Day Card */
+.lowest-day-card {
+  border-color: rgba(255, 100, 50, 0.3);
+}
+
+.lowest-day-card:hover {
+  border-color: rgba(255, 100, 50, 0.6);
+  box-shadow: 0 8px 24px rgba(255, 100, 50, 0.2);
+}
+
+.lowest-day-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255, 100, 50, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Insight Card Content */
+.insight-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(200, 200, 200, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+}
+
+.insight-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FFD700;
+  position: relative;
+  z-index: 1;
+}
+
+.insight-day {
+  font-size: 0.95rem;
+  color: rgba(200, 200, 200, 0.7);
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .earnings-card {
+    padding: 1.5rem 1rem;
+    margin: 0 1rem;
+  }
+
+  .earnings-card-header {
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+
+  .earnings-icon {
+    align-self: flex-start;
+    width: 50px;
+    height: 50px;
+  }
+
+  .earnings-icon svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .chart-bars {
+    min-height: 160px;
+    gap: 0.8rem;
+  }
+
+  .chart-bar {
+    width: 28px;
+  }
+
+  .chart-bar-wrapper {
+    height: 150px;
+  }
+
+  .earnings-stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .stat-box {
+    padding: 1rem;
+  }
+
+  .stat-amount {
+    font-size: 1.5rem;
+  }
+
+  .insights-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .earnings-overview-container {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .earnings-section-header {
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .earnings-section-title {
+    font-size: 0.85rem;
+  }
+
+  .earnings-card {
+    padding: 1.2rem 1rem;
+    margin: 0 1rem;
+    border-radius: 16px;
+  }
+
+  .earnings-card-title {
+    font-size: 1.2rem;
+  }
+
+  .earnings-card-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .earnings-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .earnings-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .chart-bars {
+    min-height: 140px;
+    gap: 0.6rem;
+  }
+
+  .chart-bar {
+    width: 24px;
+  }
+
+  .chart-bar-wrapper {
+    height: 130px;
+  }
+
+  .chart-day {
+    font-size: 0.75rem;
+  }
+
+  .stat-label {
+    font-size: 0.65rem;
+  }
+
+  .stat-amount {
+    font-size: 1.3rem;
+  }
+
+  .earnings-insights {
+    padding: 0 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .insights-title {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .insight-card {
+    padding: 1.2rem;
+    border-radius: 12px;
+  }
+
+  .insight-label {
+    font-size: 0.7rem;
+  }
+
+  .insight-value {
+    font-size: 1.6rem;
+  }
+
+  .insight-day {
+    font-size: 0.9rem;
+  }
+}
