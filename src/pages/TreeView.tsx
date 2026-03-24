@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Tree from "react-d3-tree";
 import Header from "../components/Header";
 import BottomNavigation from "../components/BottomNavigation";
@@ -79,7 +79,7 @@ export default function TreeView() {
     ]
   };
 
-  const renderNode = ({ nodeDatum }) => {
+  const renderNode = ({ nodeDatum }: { nodeDatum: any }) => {
     const isRoot = nodeDatum.attributes?.totalTeam !== undefined;
     
     // Responsive scaling
@@ -232,7 +232,7 @@ export default function TreeView() {
               nodeSize={{ x: config.nodeX, y: config.nodeY }}
               separation={{ siblings: config.siblingGap, nonSiblings: config.nonSiblingGap }}
               renderCustomNodeElement={renderNode}
-              linkStroke="#00ffff"
+              linkStroke="#FF9500"
               linkStrokeWidth={2}
               zoomable={false}
               enableLegacyTransitions={false}
