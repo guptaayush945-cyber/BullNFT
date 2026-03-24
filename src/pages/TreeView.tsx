@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Tree from "react-d3-tree";
 import Header from "../components/Header";
 import BottomNavigation from "../components/BottomNavigation";
@@ -6,6 +7,7 @@ import "../styles/team-tree.css";
 
 export default function TreeView() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const navigate = useNavigate();
 
   // Listen to window resize
   useEffect(() => {
@@ -221,6 +223,12 @@ export default function TreeView() {
               </div>
             ))}
           </div>
+
+          {/* Back Button */}
+          <button className="back-button" onClick={() => navigate(-1)}>
+            <span className="back-arrow">←</span>
+            <span className="back-text">Back</span>
+          </button>
 
           {/* Tree Visualization */}
           <div className="d3-tree-container" style={{height: config.containerHeight}}>
