@@ -7,6 +7,8 @@ import SignUp from './components/SignUp'
 import UpgradePackage from './pages/UpgradePackage'
 import Marketplace from './pages/Marketplace'
 import Dashboard from './pages/Dashboard'
+import TeamTree from './pages/TeamTree'
+import TreeView from './pages/TreeView'
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route path="/" element={<SignUp />} />
           <Route path="/home" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/teamtree" element={<TeamTree />} />
+          <Route path="/treeview" element={<TreeView />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/upgrade" element={<UpgradePackage />} />

@@ -251,3 +251,21 @@ export const StackIcon = ({ color }: SvgIconProps) => (
     <path d="M8 24L20 32L32 24" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
   </svg>
 );
+
+export const DepthViewIcon = ({ color }: SvgIconProps) => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 2L15 10H23L17 15L19 23L12 18L5 23L7 15L1 10H9L12 2Z" fill={color} />
+    <circle cx="18" cy="6" r="2" fill={color} opacity="0.6" />
+    <circle cx="4" cy="18" r="1.5" fill={color} opacity="0.6" />
+  </svg>
+);
+
+export const TreeViewIcon = ({ color }: SvgIconProps) => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="12" r="3" stroke={color} strokeWidth="2" />
+    <path d="M12 9V4" stroke={color} strokeWidth="2" strokeLinecap="round" />
+    <path d="M15 12H20" stroke={color} strokeWidth="2" strokeLinecap="round" />
+    <path d="M9 12H4" stroke={color} strokeWidth="2" strokeLinecap="round" />
+    <path d="M12 15V20" stroke={color} strokeWidth="2" strokeLinecap="round" />
+  </svg>
+);

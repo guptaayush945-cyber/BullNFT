@@ -42,7 +42,7 @@ export default function Header() {
             <a href="/" onClick={(e) => handleMenuClick('/marketplace', e)}>Marketplace</a>
             <a href="/" onClick={(e) => handleMenuClick('/upgrade', e)}>Upgrade Plan</a>
             <a href="/" onClick={(e) => handleMenuClick('/about', e)}>Bull Pass</a>
-            <a href="/" onClick={(e) => handleMenuClick('/contact', e)}>Team Tree</a>
+            <a href="/" onClick={(e) => handleMenuClick('/teamtree', e)}>Team Tree</a>
           </nav>
         </div>
       )}
